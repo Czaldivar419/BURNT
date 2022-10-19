@@ -10,6 +10,7 @@ function createWorkout() {
    let deadliftInput = document.getElementById("deadlift").value;
    let curlInput = document.getElementById("curl").value;
 
+
    console.log("bench-press", benchPress);
    console.log("squat", squatInput);
    console.log("deadlift", deadliftInput);
