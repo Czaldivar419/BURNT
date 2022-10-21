@@ -1,2 +1,6 @@
 # Custom Workout App
- A workout app that creates a custom workout plan based upon your fitness goals and current strength level.
+
+## User Story
+
+As a user I want a website that I can navigate through and pick from one of the three catagories In the navbar and get a custom
+workout based off of my custom input.
