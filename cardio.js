@@ -56,11 +56,11 @@ function createWorkout() {
 
 
 //-------------------------------------------Today--------------------------------------------------------
-   var mon = document.getElementById("mon");
-   var monText = document.createTextNode("Monday:");
-      mon.appendChild(monText);
+   // var mon = document.getElementById("mon");
+   // var monText = document.createTextNode("Monday:");
+   //    mon.appendChild(monText);
 
-      let monSplit = document.querySelector("#mon-plan")
+      let monSplit = document.querySelector(".mon-plan")
       let chestWo = firstDay.map(firstDay => {
          let li = document.createElement("li");
          li.textContent = firstDay;
@@ -69,15 +69,15 @@ function createWorkout() {
       monSplit.append(... chestWo);
 
 
-      var dayWeek = today.format("[Workout for:] dddd")
-$("#mon").text(dayWeek);
+      var dayOne = today.format("[Workout for:] dddd")
+$(".mon").text(dayOne);
 //-------------------------------------------Day2---------------------------------------------------------
    
-   var tues = document.getElementById("tues");
-   var tuesText = document.createTextNode("Tuesday:");
-      tues.appendChild(tuesText);
+   // var tues = document.getElementById("tues");
+   // var tuesText = document.createTextNode("Tuesday:");
+   //    tues.appendChild(tuesText);
 
-      let tuesSplit = document.querySelector("#tues-plan")
+      let tuesSplit = document.querySelector(".tues-plan")
       let tuesWo = restDay.map(restDay => {
          let li = document.createElement("li");
          li.textContent = restDay;
@@ -85,31 +85,31 @@ $("#mon").text(dayWeek);
       });
       tuesSplit.append(... tuesWo);
 
-      var dayWeek = day2.format("[Workout for:] dddd")
-$("#tues").text(dayWeek);
+      var dayTwo = day2.format("[Workout for:] dddd")
+$(".tues").text(dayTwo);
 // -------------------------------------------Day3---------------------------------------------------------
    
-   var wed = document.getElementById("wed");
-   var wedText = document.createTextNode("Wednesday:");
-      wed.appendChild(wedText);
+   // var wed = document.getElementById("wed");
+   // var wedText = document.createTextNode("Wednesday:");
+   //    wed.appendChild(wedText);
 
-      let wedSplit = document.querySelector("#wed-plan")
+      let wedSplit = document.querySelector(".wed-plan")
       let legWo = secondDay.map(secondDay => {
          let li = document.createElement("li");
          li.textContent = secondDay;
          return li;
       });
       wedSplit.append(... legWo);
-      var dayWeek = day3.format("[Workout for:] dddd")
-      $("#wed").text(dayWeek);
+      var dayThree = day3.format("[Workout for:] dddd")
+      $(".wed").text(dayThree);
 // ------------------------------------------Day4-----------------------------------------------------------
 
 
-   var thr = document.getElementById("thr");
-   var thrText = document.createTextNode("Thursday:");
-      thr.appendChild(thrText);
+   // var thr = document.getElementById("thr");
+   // var thrText = document.createTextNode("Thursday:");
+   //    thr.appendChild(thrText);
 
-      let thrSplit = document.querySelector("#thr-plan")
+      let thrSplit = document.querySelector(".thr-plan")
       let thrWo = restDay.map(restDay => {
          let li = document.createElement("li");
          li.textContent = restDay;
@@ -117,23 +117,23 @@ $("#tues").text(dayWeek);
 
       });
       thrSplit.append(... thrWo);
-      var dayWeek = day4.format("[Workout for:] dddd")
-      $("#thr").text(dayWeek);
+      var dayFour = day4.format("[Workout for:] dddd")
+      $(".thr").text(dayFour);
 // -----------------------------------------Day5----------------------------------------------------------------------
 
-   var fri = document.getElementById("fri");
-   var friText = document.createTextNode("Friday:");
-      fri.appendChild(friText);
+   // var fri = document.getElementById("fri");
+   // var friText = document.createTextNode("Friday:");
+   //    fri.appendChild(friText);
 
-      let friSplit = document.querySelector("#fri-plan")
+      let friSplit = document.querySelector(".fri-plan")
       let armWo = thirdDay.map(thirdDay => {
          let li = document.createElement("li");
          li.textContent = thirdDay;
          return li;
       });
       friSplit.append(... armWo);
-      var dayWeek = day5.format("[Workout for:] dddd")
-      $("#fri").text(dayWeek);
+      var dayFive = day5.format("[Workout for:] dddd")
+      $(".fri").text(dayFive);
 
       if(stretchInput === "yes") {
          monSplit.append(cooldown)
