@@ -10,41 +10,45 @@
 </head>
 <body>
 
-  <div class="card w-100">
+  <main class="content">
+    
     <div class="card-body inputs">
       <h1 class="card-title">Enter your one rep maxes for a customized workout plan!</h1>
-      <div class="bench row mb-3"> <!-- Steps Input-->
+    </div>
+
+      <section class="steps card"> <!-- Steps Input-->
         <label for="colFormLabel" class="col-sm-2 col-form-label">How many Steps do you take in a day?</label>
         <div class="col-sm-4">
           <input type="steps" class="form-control" id="steps" placeholder="Ex. 5,000">
         </div>
-      </div>
+      </section>
 
-      <div class="squat row mb-3"> <!--User Age Input-->
+      <section class="age card"> <!--User Age Input-->
         <label for="colFormLabel" class="col-sm-2 col-form-label">How old are you?</label>
         <div class="col-sm-4">
           <input type="userAge" class="form-control" id="userAge" placeholder="Ex. 25">
         </div>
-      </div>
+      </section>
 
-      <div class="deadlift row mb-3"> <!--Run Time Input-->
+      <section class="run card"> <!--Run Time Input-->
         <label for="colFormLabel" class="col-sm-2 col-form-label">How many minutes do you spend running everyday</label>
         <div class="col-sm-4">
           <input type="runTime" class="form-control" id="runTime" placeholder="Ex. 10">
         </div>
-      </div>
+      </section>
 
-      <div class="curl row mb-3"> <!--Stretch Input-->
+      <section class="stetch card"> <!--Stretch Input-->
         <label for="colFormLabel" class="col-sm-2 col-form-label">Do you want to add a cooldown to this workout?</label>
         <div class="col-sm-4">
           <input type="stretch" class="form-control" id="stretch" placeholder="Ex. Yes or No">
-        
-      <button type="button" class="btn btn-light" id ="submit-button">Submit</button>
+      </section>
+
+      <button id="submit-button" class="button is-danger is-large is-center">CLICK TO GET BURNT</button>
 
         </div>
       </div>
     </div>
-  </div>
+  </main>
   
   <div class="card w-100">
     <div class="card-body">
