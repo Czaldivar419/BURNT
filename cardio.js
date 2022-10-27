@@ -1,55 +1,48 @@
+
 var submitButton = document.getElementById('submit-button');
-
-
 
 
 function createWorkout() {
 
    let stepsInput = document.getElementById("steps").value;
    let ageInput = document.getElementById("userAge").value;
-   let runTimetInput = document.getElementById("runTime").value;
+   let runTimeInput = document.getElementById("runTime").value;
    let stretchInput = document.getElementById("stretch").value;
 
 
    console.log("steps", stepsInput);
    console.log("userAge", ageInput);
-   console.log("runTime", runTimetInput);
+   console.log("runTime", runTimeInput);
    console.log("stretch", stretchInput);
 
    // Workout Splits
 
    let firstDay = [
       "Jumping Jacks: " + (.8 * stepsInput),
-      "Incline Dumbell Press, 4x15: " + (.25 * stepsInput),
-      "Incline Dumbell Flyes, 4x15: " + (.15 * stepsInput),
-      "Hammer Strength Decline Press, 4x10: " + (.4 * stepsInput),
-      "Hammer Strength Pec Flyes, 4x12: " + (.5 * stepsInput)
+      "Mountain Climers:" + (.25 * stepsInput),
+      "Jump rope: " + (.15 * stepsInput),
+      "Squat Jumps: " + (.4 * stepsInput),
+      "Lunges: " + (.5 * stepsInput)
    ];
 
    let secondDay = [
-      "Barbell Squat, 4x8: " + (.8 * ageInput),
-      "Leg Extensions, 4x12: " + (.5 * ageInput),
-      "Hack Squat, 4x10: " + (.9 * ageInput),
-      "Goblet Squats, 4x15: " + (.2 * ageInput),
-      "Seated Calf Raises, 4x15: " + (.15 * ageInput),
+      "Side Shuffles: " + (.8 * ageInput),
+      "Burpies: " + (.4 * ageInput),
+      "Jump rope: " + (.7 * ageInput),
+      "Prisoner Squat Jumps:" + (.2 * ageInput),
    ]
 
    let thirdDay = [
-      "T Bar Rows, 4x12: " + (.65 * runTimetInput),
-      "Lat Pull Downs, 4x12: " + (.5 * runTimetInput),
-      "Seated Cable Rows, 4x8: " + (.5 * runTimetInput),
-      "Barbell Shrugs, 4x12: " + (.7 * runTimetInput),
-      "Underhand Barbell Rows, 4x10: " + (.58 * runTimetInput)
+      "Jog for " + (1.95 * runTimeInput) + " minutes.",
+      "Shadow Boxing for "+(1.5 *runTimeInput) + " minutes."
    ]
 
-   let fourthDay = [
-      "Barbell Bicep Curls, 4x12: " + (.5 * stretchInput),
-      "Overhead Tricep Extension, 4x10: " + (.6 * stretchInput),
-      "Tricep Cable Pushdowns, 4x12: " + (.4 * stretchInput),
-      "Bicep Cable Curls, 4x12: " + (.5 * stretchInput),
-      "Preacher Curls, 4x10: " + (.65 * stretchInput),
+   let cooldown = [
+      "Sumo Squat Stretch",
+      "2 Sun Salutations",
+      "Seated Twist"
    ]
-
+ 
    let restDay = [
       "Rest Day/Active Recovery"
    ]
@@ -62,7 +55,7 @@ function createWorkout() {
 
 
 //-------------------------------------------Monday--------------------------------------------------------
-   
+// moment(now);
    var mon = document.getElementById("mon");
    var monText = document.createTextNode("Monday:");
       mon.appendChild(monText);
@@ -155,9 +148,9 @@ function createWorkout() {
       sun.appendChild(sunText);
 
       let sunSplit = document.querySelector("#sun-plan")
-      let backWo = fourthDay.map(fourthDay => {
+      let backWo = cooldown.map(cooldown => {
          let li = document.createElement("li");
-         li.textContent = fourthDay;
+         li.textContent = cooldown;
          return li;
       });
       sunSplit.append(... backWo);
