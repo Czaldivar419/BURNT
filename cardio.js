@@ -1,5 +1,11 @@
-
 var submitButton = document.getElementById('submit-button');
+var today = moment();
+var day2=moment().add(1,'days');
+var day3=moment().add(2,'days');
+var day4=moment().add(3,'days');
+var day5=moment().add(4,'days');
+
+
 
 
 function createWorkout() {
@@ -18,18 +24,18 @@ function createWorkout() {
    // Workout Splits
 
    let firstDay = [
-      "Jumping Jacks: " + (.8 * stepsInput),
-      "Mountain Climers:" + (.25 * stepsInput),
+      "Jumping Jacks: " + (.02 * stepsInput),
+      "Mountain Climers: " + (.01 * stepsInput),
       "Jump rope: " + (.15 * stepsInput),
-      "Squat Jumps: " + (.4 * stepsInput),
-      "Lunges: " + (.5 * stepsInput)
+      "Squat Jumps: " + (.04 * stepsInput),
+      "Lunges: " + (.03 * stepsInput)
    ];
 
    let secondDay = [
       "Side Shuffles: " + (.8 * ageInput),
       "Burpies: " + (.4 * ageInput),
       "Jump rope: " + (.7 * ageInput),
-      "Prisoner Squat Jumps:" + (.2 * ageInput),
+      "Prisoner Squat Jumps: " + (.2 * ageInput),
    ]
 
    let thirdDay = [
@@ -37,16 +43,11 @@ function createWorkout() {
       "Shadow Boxing for "+(1.5 *runTimeInput) + " minutes."
    ]
 
-   let cooldown = [
-      "Sumo Squat Stretch",
-      "2 Sun Salutations",
-      "Seated Twist"
-   ]
- 
    let restDay = [
       "Rest Day/Active Recovery"
    ]
 
+   let cooldown = ("Sumo Squat Stretch, 2 Sun Salutations, Seated Twist")
 
 // Workout Header
    var workoutTitle = document.getElementById("split-title");
@@ -54,8 +55,7 @@ function createWorkout() {
       workoutTitle.appendChild(text);
 
 
-//-------------------------------------------Monday--------------------------------------------------------
-// moment(now);
+//-------------------------------------------Today--------------------------------------------------------
    var mon = document.getElementById("mon");
    var monText = document.createTextNode("Monday:");
       mon.appendChild(monText);
@@ -68,7 +68,10 @@ function createWorkout() {
       });
       monSplit.append(... chestWo);
 
-//-------------------------------------------Tuesday---------------------------------------------------------
+
+      var dayWeek = today.format("[Workout for:] dddd")
+$("#mon").text(dayWeek);
+//-------------------------------------------Day2---------------------------------------------------------
    
    var tues = document.getElementById("tues");
    var tuesText = document.createTextNode("Tuesday:");
@@ -82,7 +85,9 @@ function createWorkout() {
       });
       tuesSplit.append(... tuesWo);
 
-// -------------------------------------------Wednesday---------------------------------------------------------
+      var dayWeek = day2.format("[Workout for:] dddd")
+$("#tues").text(dayWeek);
+// -------------------------------------------Day3---------------------------------------------------------
    
    var wed = document.getElementById("wed");
    var wedText = document.createTextNode("Wednesday:");
@@ -95,8 +100,9 @@ function createWorkout() {
          return li;
       });
       wedSplit.append(... legWo);
-
-// ------------------------------------------Thursday-----------------------------------------------------------
+      var dayWeek = day3.format("[Workout for:] dddd")
+      $("#wed").text(dayWeek);
+// ------------------------------------------Day4-----------------------------------------------------------
 
 
    var thr = document.getElementById("thr");
@@ -111,8 +117,9 @@ function createWorkout() {
 
       });
       thrSplit.append(... thrWo);
-
-// -----------------------------------------Friday----------------------------------------------------------------------
+      var dayWeek = day4.format("[Workout for:] dddd")
+      $("#thr").text(dayWeek);
+// -----------------------------------------Day5----------------------------------------------------------------------
 
    var fri = document.getElementById("fri");
    var friText = document.createTextNode("Friday:");
@@ -125,43 +132,30 @@ function createWorkout() {
          return li;
       });
       friSplit.append(... armWo);
+      var dayWeek = day5.format("[Workout for:] dddd")
+      $("#fri").text(dayWeek);
 
-//-----------------------------------Saturday-----------------------------------------------------------------------------
+      if(stretchInput === "yes") {
+         monSplit.append(cooldown)
+         wedSplit.append(cooldown)
+         friSplit.append(cooldown)
+      }else if(stretchInput === "Yes") {
+         monSplit.append(cooldown)
+         wedSplit.append(cooldown)
+         friSplit.append(cooldown)
+      }else if(stretchInput === "") {
+         alert("Cooldown: Yes or no?")
+      }else{
+         monSplit.append("No cooldown")
+         wedSplit.append("No cooldown")
+         friSplit.append("No cooldown")
+      }
 
-   var sat = document.getElementById("sat");
-   var satText = document.createTextNode("Saturday:");
-      sat.appendChild(satText);
 
-      let satSplit = document.querySelector("#sat-plan")
-      let satWo = restDay.map(restDay => {
-         let li = document.createElement("li");
-         li.textContent = restDay;
-         return li;
-
-      });
-      satSplit.append(... satWo);
-   
-//-----------------------------------Sunday-----------------------------------------------------------------------------
-
-   var sun = document.getElementById("sun");
-   var sunText = document.createTextNode("Sunday");
-      sun.appendChild(sunText);
-
-      let sunSplit = document.querySelector("#sun-plan")
-      let backWo = cooldown.map(cooldown => {
-         let li = document.createElement("li");
-         li.textContent = cooldown;
-         return li;
-      });
-      sunSplit.append(... backWo);
 }
 
 
 
-
-
-
-
-
-
 submitButton.addEventListener('click', createWorkout);
+
+
