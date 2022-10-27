@@ -4,49 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Workout Program Calculator</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./Main.css">
-    <link rel="stylesheet" href="./toning-calc.css">
+    <link rel="stylesheet" href="Main.css">
 </head>
 <body>
 
+    <nav class="Nav-container">
+        <ul>
+            <label for="logo"></label>
+            <img src="Burnt.png" alt="Logo" width="100px" height="100px">
+            <li><a href="toning-calc.html">Tone Up</a></li>
+            <li><a href="get-built.html">Get Built</a></li>
+            <li><a href="cardio.html">Get Sweaty</a></li>
+        </ul>
+    </nav>
+    <nav class="burgerbar">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </nav>
+
   <div class="card w-100">
     <div class="card-body inputs">
-      <h1 class="card-title">Enter your one rep maxes to get toned!</h1>
-      <div class="bench row mb-3"> <!-- Bench Press Input-->
-        <label for="colFormLabel" class="col-sm-2 col-form-label">Bench Press</label>
-        <div class="col-sm-4">
-          <input type="bench-press" class="form-control" id="bench" placeholder="Ex. 225">
-        </div>
-      </div>
-
-      <div class="squat row mb-3"> <!--Squat Input-->
-        <label for="colFormLabel" class="col-sm-2 col-form-label">Squat</label>
-        <div class="col-sm-4">
-          <input type="squat" class="form-control" id="squat" placeholder="Ex. 315">
-        </div>
-      </div>
-
-      <div class="deadlift row mb-3"> <!--Deadlift Input-->
-        <label for="colFormLabel" class="col-sm-2 col-form-label">Deadlift</label>
-        <div class="col-sm-4">
-          <input type="deadlift" class="form-control" id="deadlift" placeholder="Ex. 315">
-        </div>
-      </div>
-
-      <div class="curl row mb-3"> <!--Curl Input-->
-        <label for="colFormLabel" class="col-sm-2 col-form-label">Biecp Curl</label>
-        <div class="col-sm-4">
-          <input type="curl" class="form-control" id="curl" placeholder="Ex. 135">
-      <button type="button" class="btn btn-light" id ="submit-button">Submit</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
+=======
+    <title>Toning Workout Program</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="content is-fluid">
   
-  <div class="card w-100">
+    <div class="card-body inputs container is-fluid">
+>>>>>>> origin
+      <h1 class="card-header">Enter your one rep maxes to get toned!</h1>
+    </div>  
+    
+      <section class="bench card"> <!-- Bench Press Input-->
+        <h3  class="card-header">Bench Press</h2>
+        <div class="col-sm-4">
+          <input type="bench-press" class="input is-medium" id="bench" placeholder="Ex. 225">
+        </div>
+      </section>
+      
+      <section class="squat card"> <!--Squat Input-->
+        <h3  class="card-header">Squat</h2>
+        <div class="col-sm-4">
+          <input type="squat" class="input is-medium" id="squat" placeholder="Ex. 315">
+        </div>
+      </section>
+
+      <section class="deadlift card"> <!--Deadlift Input-->
+        <h3 class="card-header">Deadlift</h2>
+        <div class="col-sm-4">
+          <input type="deadlift" class="input is-medium" id="deadlift" placeholder="Ex. 315">
+        </div>
+      </section>
+
+      <section class="curl card"> <!--Curl Input-->
+        <h3  class="card-header">Biecp Curl</h2>
+        <div class="col-sm-4">
+          <input type="curl" class="input is-medium" id="curl" placeholder="Ex. 135">
+      </section>
+
+      <!-- button to submit all rep weights into calculator -->
+      <button id="submit-button" class="button is-danger is-large is-center">CLICK TO GET BURNT</button>
+  </main>
+
+<!-- generated workout -->
+  <section class="card w-100">
     <div class="card-body">
 
         <div id="workout-header">
@@ -75,7 +104,6 @@
 
           <h3 id="sun"></h3>
             <p id="sun-plan"></p>
-
 
         </div>
       </div>
@@ -120,13 +148,11 @@
 
 
         </div>
-    </div>
+  </section>
     
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 <script src="./toning-calc.js"></script>
 </body>
 </html>
