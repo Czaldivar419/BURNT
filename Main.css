@@ -1,0 +1,28 @@
+body {
+    background-color: #03071E;
+    color: #FAA307;
+}
+
+.nav-container {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    padding: 10px;
+    padding-right: 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: #FAA307;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 50px;
+}
+li :hover {
+    font-weight: lighter;
+    color: #E85D04;
+}
