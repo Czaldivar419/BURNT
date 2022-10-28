@@ -26,3 +26,52 @@ li :hover {
     font-weight: lighter;
     color: #E85D04;
 }
+
+/* Leann's calculator section */
+
+.main {
+ text-align: center;
+ padding-left: 5%;
+ padding-right: 5%;
+ text-align: center;
+}
+
+.main > h1 {
+    text-align: center;
+}
+
+
+#bold {
+    color: yellow;
+}
+.calc-btn {
+    background-color:yellow;
+    color: white;
+    border:#9D0208
+    
+}
+
+.calc-btn :hover{
+    outline: none;
+    border: #E85D04;
+    box-shadow: 0 0 10px #E85D04;;
+}
+
+/* media query section */
+/* 390px nav burger media query */
+.burgerbar {
+    display: none;
+}
+
+.Nav-container {
+    width:100%;
+}
+
+@media only screen and (max-width: 390px) {
+    .burgerbar {
+        display: block;
+    }
+    .Nav-container {
+        display: none;
+    }
+}
