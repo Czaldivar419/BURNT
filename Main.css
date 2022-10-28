@@ -26,3 +26,12 @@ li :hover {
     font-weight: lighter;
     color: #E85D04;
 }
+
+.social-media{
+    font-size: 30px;
+    min-height:100vh; 
+    height:100px;
+    padding-top: 40rem;
+    margin: auto;
+}
+
