@@ -1,6 +1,13 @@
 body {
     background-color: #03071E;
     color: #FAA307;
+    font-size: 18px;
+}
+
+.burnt {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
 }
 
 .nav-container {
@@ -12,7 +19,9 @@ ul {
     justify-content: end;
     list-style: none;
     padding: 10px;
-    padding-right: 10px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 li a {
@@ -23,6 +32,10 @@ li a {
     padding-left: 50px;
 }
 li :hover {
-    font-weight: lighter;
     color: #E85D04;
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
 }
