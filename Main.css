@@ -28,27 +28,37 @@ li :hover {
 }
 
 /* Leann's calculator section */
-
+.calculator {
+    display: flex;
+    justify-content: center;
+}
 .main {
  text-align: center;
  padding-left: 5%;
  padding-right: 5%;
  text-align: center;
 }
-
-.main > h1 {
+.header-card {
+    background-color: #efefef;
+    border-color: #efefef;
     text-align: center;
 }
-
-
-#bold {
-    color: yellow;
+.header-card > h1 {
+    color: #101010;
 }
+
+/* calculator input styling */
+.text-left {
+    text-align:left;
+}
+
 .calc-btn {
     background-color:yellow;
-    color: white;
+    color: black;
     border:#9D0208
-    
+}
+.inline {
+    display: inline;
 }
 
 .calc-btn :hover{
@@ -56,6 +66,16 @@ li :hover {
     border: #E85D04;
     box-shadow: 0 0 10px #E85D04;;
 }
+
+.workout-card {
+    padding: 10%;
+
+}
+
+.workout-header {
+    text-align: center;
+}
+
 
 /* media query section */
 /* 390px nav burger media query */
