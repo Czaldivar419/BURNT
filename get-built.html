@@ -9,55 +9,37 @@
     <link rel="stylesheet" href="Main.css">
 </head>
 <body>
-<main class="content"> 
+<main class="content is-fluid"> 
 
-    <nav class="Nav-container">
-        <ul>
-            <label for="logo"></label>
-            <img src="Burnt.png" alt="burntLogo" width="100px" height="100px">
-            <li><a href="toning-calc.html">Tone Up</a></li>
-            <li><a href="get-built.html">Get Built</a></li>
-            <li><a href="cardio.html">Get Sweaty</a></li>
-        </ul>
-    </nav>
-    <nav class="burgerbar">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </nav>
-
-  <div class="card w-100">
-    <div class="card-body inputs">
+    <div class="card-body inputs container is-fluid">
       <h1 class="card-header is-center">Enter your one rep maxes for a customized workout plan!</h1>
     </div>  
 
       <section class="bench card"> <!-- Bench Press Input-->
         <h3 class="card-header">Bench Press</label>
         <div class="col-sm-4">
-          <input type="bench-press" class="form-control" id="bench" placeholder="Ex. 225">
+          <input type="bench-press" class="input is-medium" id="bench" placeholder="Ex. 225">
         </div>
       </section>
 
       <section class="squat card"> <!--Squat Input-->
         <h3 class="card-header">Squat</label>
         <div class="col-sm-4">
-          <input type="squat" class="form-control" id="squat" placeholder="Ex. 315">
+          <input type="squat" class="input is-medium" id="squat" placeholder="Ex. 315">
         </div>
       </section>
 
       <section class="deadlift card"> <!--Deadlift Input-->
         <h3 class="card-header">Deadlift</label>
         <div class="col-sm-4">
-          <input type="deadlift" class="form-control" id="deadlift" placeholder="Ex. 315">
+          <input type="deadlift" class="input is-medium" id="deadlift" placeholder="Ex. 315">
         </div>
       </section>
 
       <section class="curl card"> <!--Curl Input-->
-        <label class="card-header">Biecp Curl</label>
+        <h3 class="card-header">Biecp Curl</h3>
         <div class="col-sm-4">
-          <input type="curl" class="form-control" id="curl" placeholder="Ex. 135">
+          <input type="curl" class="input is-medium" id="curl" placeholder="Ex. 135">
         </div>
       </section>
 
@@ -145,6 +127,6 @@
 
 
 
-<script src="./script.js"></script>
+<script src="./get-built.js"></script>
 </body>
 </html>
