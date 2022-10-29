@@ -2,6 +2,19 @@ body {
     background-color: #03071E;
     color: #FAA307;
     font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.brand-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    justify-content: center;
 }
 
 .burnt {
@@ -33,9 +46,11 @@ li a {
 }
 li :hover {
     color: #E85D04;
+    text-decoration: none;
 }
 
-.text-box {
+.article {
     display: flex;
-    justify-content: center;
+  justify-content: space-around;
 }
+
