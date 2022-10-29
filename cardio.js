@@ -23,23 +23,23 @@ function createWorkout() {
    // Workout Splits
 
    let firstDay = [
-      "Jumping Jacks: " + (.02 * stepsInput),
-      "Mountain Climers: " + (.01 * stepsInput),
-      "Jump rope: " + (.05 * stepsInput),
-      "Squat Jumps: " + (.04 * stepsInput),
-      "Lunges: " + (.03 * stepsInput)
+      "Jumping Jacks: " + Math.ceil(.02 * stepsInput),
+      "Mountain Climers: " + Math.ceil(.01 * stepsInput),
+      "Jump rope: " + Math.ceil(.05 * stepsInput),
+      "Squat Jumps: " + Math.ceil(.04 * stepsInput),
+      "Lunges: " + Math.ceil(.03 * stepsInput)
    ];
 
    let secondDay = [
-      "Side Shuffles: " + (1.5 * ageInput),
-      "Burpies: " + (1.4 * ageInput),
-      "Jump rope: " + (2.7 * ageInput),
-      "Prisoner Squat Jumps: " + (.6 * ageInput),
+      "Side Shuffles: " + Math.ceil(1.5 * ageInput),
+      "Burpies: " + Math.ceil(1.4 * ageInput),
+      "Jump rope: " + Math.ceil(2.7 * ageInput),
+      "Prisoner Squat Jumps: " + Math.ceil(.6 * ageInput),
    ]
 
    let thirdDay = [
-      "Jog for " + (1.95 * runTimeInput) + " minutes.",
-      "Shadow Boxing for "+(1.5 *runTimeInput) + " minutes."
+      "Jog for " + Math.ceil(1.95 * runTimeInput) + " minutes.",
+      "Shadow Boxing for "+ Math.ceil(1.5 *runTimeInput) + " minutes."
    ]
 
    let restDay = [
@@ -150,6 +150,45 @@ function createWorkout() {
          wedSplit.append("No cooldown")
          friSplit.append("No cooldown")
       }
+
+
+
+
+
+      
+      // function renderMessage() {
+      //    var storedDayOne = JSON.parse(localStorage.getItem("Your Saved Workout"));
+
+      //    if (storedDayOne !== null) {
+      //       document.querySelector("#mon-plan").textContent = monSplit
+      //     } 
+
+      //    if (storedDayTwo !== null) {
+      //       document.querySelector("#tues-plan").textContent = tuesSplit
+      //     }
+        
+      //    if (storedDayThree !== null) {
+      //       document.querySelector("#wed-plan").textContent = wedSplit
+      //    }
+      //    if (storedDayFour !== null) {
+      //       document.querySelector("#thr-plan").textContent = thrSplit
+      //     }
+      //    if (storedDayFive !== null) {
+      //       document.querySelector("#fri-plan").textContent = friSplit
+      //     }
+    
+    
+      var finalWorkout = {
+         Today: firstDay,
+         Tomorrow: restDay,
+         ThreeDays: secondDay,
+         RestDay2: restDay,
+         FinalDay:thirdDay
+
+       };
+    
+   
+    localStorage.setItem("Your Saved Workout", JSON.stringify(finalWorkout));
 
 
 }
