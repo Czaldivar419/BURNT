@@ -1,14 +1,20 @@
 body {
-    background-color: #03071E;
-    color: #FAA307;
+    background-color: #efefef;
+    /* color: #FAA307; */
+    color: #101010;
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
+}
+
+.Nav-container {
+    background-color: #03071E;
+    color: #FAA307;
 }
 
 .brand-title {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    /* margin: 20px; */
     align-items: center;
 }
 
@@ -21,6 +27,7 @@ label {
     display: flex;
     justify-content: center;
     letter-spacing: 2px;
+    margin-right: 860px;
 }
 
 .nav-container {
@@ -34,14 +41,14 @@ ul {
     padding: 10px;
     padding-right: 40px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
 }
 
 li a {
     text-decoration: none;
     color: #FAA307;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 19px;
     padding-left: 50px;
 }
 li :hover {
@@ -51,6 +58,101 @@ li :hover {
 
 .article {
     display: flex;
-  justify-content: space-around;
+    justify-content: space-around;
+    padding-top: 50px;
 }
 
+.info-container {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list-container {
+    /* border: 1px solid black; */
+    margin-left: 275px;
+    text-transform: none;
+    margin-top: 10px;
+}
+
+#workouts {
+    padding-left: 250px;
+}
+
+.p-container {
+    display: flex;
+    justify-content: flex-start;
+    text-transform: none;
+    margin-left: 230px;
+    font-size: 15px;
+    margin-top: -34px;
+    color: #888888;
+    align-items: center;
+}
+
+#variety {
+    padding-left: 185px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+}
+
+#instagram {
+    display: flex;
+    margin-right: 720px;
+}
+
+#slogan {
+    color: #D00000;
+}
+
+.text-container {
+    display: flex;
+    padding-left: 260px;
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+.instagram-users {
+    display: flex;
+    justify-content: center;
+    padding-left: 60px;
+    padding-top: 30px;
+}
+
+hr {
+    border: 1px solid black;
+    width: 90%;
+}
+
+@media only screen and (max-width: 390px) {
+    .burgerbar {
+        display: block;
+    }
+    .navbarGen {
+        display: none;
+    }
+    .workout-image {
+        display: none;
+    }
+     .main-nav {
+        display: none;
+    }
+    .article {
+        flex-direction: column;
+        align-items: center;
+    }
+    .brand-title {
+      justify-content: start;
+      align-items: center;
+    }
+    body {
+        font-size: 12px;
+    }
+    p {
+        align-items: center;
+    }
+}
