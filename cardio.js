@@ -6,6 +6,7 @@ var day4=moment().add(3,'days');
 var day5=moment().add(4,'days');
 
 
+submitButton.addEventListener('click', createWorkout);
 
 function createWorkout() {
 
@@ -23,23 +24,23 @@ function createWorkout() {
    // Workout Splits
 
    let firstDay = [
-      "Jumping Jacks: " + (.02 * stepsInput),
-      "Mountain Climers: " + (.01 * stepsInput),
-      "Jump rope: " + (.05 * stepsInput),
-      "Squat Jumps: " + (.04 * stepsInput),
-      "Lunges: " + (.03 * stepsInput)
+      "Jumping Jacks: " + Math.ceil(.02 * stepsInput),
+      "Mountain Climers: " + Math.ceil(.01 * stepsInput),
+      "Jump rope: " + Math.ceil(.05 * stepsInput),
+      "Squat Jumps: " + Math.ceil(.04 * stepsInput),
+      "Lunges: " + Math.ceil(.03 * stepsInput)
    ];
 
    let secondDay = [
-      "Side Shuffles: " + (1.5 * ageInput),
-      "Burpies: " + (1.4 * ageInput),
-      "Jump rope: " + (2.7 * ageInput),
-      "Prisoner Squat Jumps: " + (.6 * ageInput),
+      "Side Shuffles: " + Math.ceil(1.5 * ageInput),
+      "Burpies: " + Math.ceil(1.4 * ageInput),
+      "Jump rope: " + Math.ceil(2.7 * ageInput),
+      "Prisoner Squat Jumps: " + Math.ceil(.6 * ageInput),
    ]
 
    let thirdDay = [
-      "Jog for " + (1.95 * runTimeInput) + " minutes.",
-      "Shadow Boxing for "+(1.5 *runTimeInput) + " minutes."
+      "Jog for " + Math.ceil(1.95 * runTimeInput) + " minutes.",
+      "Shadow Boxing for "+ Math.ceil(1.5 *runTimeInput) + " minutes."
    ]
 
    let restDay = [
@@ -145,16 +146,86 @@ function createWorkout() {
          friSplit.append(...cooldown);
       }else if(stretchInput === "") {
          alert("Cooldown: Yes or no?")
+         // fillRequest()
       }else{
          monSplit.append("No cooldown")
          wedSplit.append("No cooldown")
          friSplit.append("No cooldown")
       }
+   //  function fillRequest(){
+   //    modal
+   //  }
 
 
+    
+      var finalWorkoutDay1 = firstDay     
+      var finalWorkoutDay2 = restDay  
+      var finalWorkoutDay3 = secondDay   
+      var finalWorkoutDay4 =  restDay
+      var finalWorkoutDay5 =  thirdDay
+      
+    
+       localStorage.setItem("Your Saved Workout Day 1", JSON.stringify(finalWorkoutDay1));
+       localStorage.setItem("Your Saved Workout Day 2", JSON.stringify(finalWorkoutDay2));
+       localStorage.setItem("Your Saved Workout Day 3", JSON.stringify(finalWorkoutDay3));
+       localStorage.setItem("Your Saved Workout Day 4", JSON.stringify(finalWorkoutDay4));
+       localStorage.setItem("Your Saved Workout Day 5", JSON.stringify(finalWorkoutDay5));
+      
+}
+
+      
+
+
+
+var modal=document.getElementById("saveModal");
+var saveButton = document.getElementById('save-button');
+var closeButton= document.getElementById("closeBtn")[0];
+
+saveButton.addEventListener('click', openModal);
+function openModal(){
+   modal.style.display= 'block';
+   renderMessage()
 }
 
 
+closeBtn.addEventListener('click', closeModal);
+function closeModal(){
+   modal.style.display= 'none';
+}
 
-submitButton.addEventListener('click', createWorkout);
 
+window.addEventListener('click', outsideClick)
+function outsideClick(event){
+   if(event.target == modal){
+   modal.style.display= 'none';
+   }
+}
+
+
+function renderMessage() {
+   
+   var storedDayOne = JSON.parse(localStorage.getItem("Your Saved Workout Day 1"));
+   var storedDayTwo= JSON.parse(localStorage.getItem("Your Saved Workout Day 2"));
+   var storedDayThree = JSON.parse(localStorage.getItem("Your Saved Workout Day 3"));
+   var storedDayFour = JSON.parse(localStorage.getItem("Your Saved Workout Day 4"));
+   var storedDayFive = JSON.parse(localStorage.getItem("Your Saved Workout Day 5"));
+   
+   if ( storedDayOne !== null) {
+      document.querySelector("#savedDay1").textContent =  storedDayOne
+    } 
+
+   if (storedDayTwo !== null) {
+      document.querySelector("#savedDay2").textContent = storedDayTwo
+    }
+  
+   if (storedDayThree !== null) {
+      document.querySelector("#savedDay3").textContent =storedDayThree
+   }
+   if (storedDayFour !== null) {
+      document.querySelector("#savedDay4").textContent =storedDayFour
+    }
+   if (storedDayFive !== null) {
+      document.querySelector("#savedDay5").textContent = storedDayFive
+    };
+
+   };

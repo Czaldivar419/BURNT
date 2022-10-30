@@ -12,6 +12,7 @@
     ></script>
     <!-- style sheet link -->
     <link rel="stylesheet" href="./Main.css">
+    <link rel="stylesheet" href="./modal.css">
 </head>
 <body>
   <nav class="Nav-container">
@@ -64,13 +65,36 @@
           <input type="stretch" class="input is-medium" id="stretch" placeholder="Ex. Yes or No">
       </section>
 
-      <div class="modal">
-        <div class="modal-background"></div>
+      <!-- cooldown modal -->
+
+      <div class="stretchModal">
+        <!-- <div class="modal-background"></div>
         <div class="modal-content">
-          Please enter Yes or No for your custom work out!
-        </div>
-        <button class="modal-close is-large" class = "js-modal-trigger" aria-label="close"id="submit-button" class="button is-danger is-large">CLICK TO GET BURNT></button>
+          Remember stretching is importent!
+        </div> -->
+        <button id="submit-button" class="button">CLICK TO GET BURNT</button>
       </div>
+
+<!-- modal for saved workouts -->
+      <button id="save-button"  class="lastWorkoutButton" class="button"> Last burn!</button>
+
+      <div id="saveModal" class ="modal">
+        <div class="modal-content">
+          <span id="closeBtn" class ="exit">&times;</span>
+          <h3>Here is your last saved workout!</h3>
+          <h4>Day 1 workout:</h4>
+          <p id ="savedDay1"> </p>
+          <h4>Day 2 workout:</h4>
+          <p id ="savedDay2"> </p>
+          <h4>Day 3 workout:</h4>
+          <p id ="savedDay3"></p>
+          <h4>Day 4 workout:</h4>
+          <p id ="savedDay4"></p>
+          <h4>Day 5 workout:</h4>
+          <p id ="savedDay5"></p>
+        </div>
+      </div>
+
   </main>
   
   <section class="card w-100">
@@ -103,10 +127,7 @@
         </div>
       </div>
     </div>
-  </section>
-    
-
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  </section>   
 <script src="./cardio.js"></script>
 </body>
 </html>
