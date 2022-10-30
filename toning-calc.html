@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toning Workout Program</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+  ></script>
     <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="./modal.css">
 </head>
 
 <body>
@@ -63,7 +67,31 @@
 
       <!-- button to submit all rep weights into calculator -->
       <button id="submit-button" class="button is-danger is-large is-center">CLICK TO GET BURNT</button>
-  </main>
+      
+      <button id="save-button"  class="lastWorkoutButton" class="button"> Last burn!</button>
+
+      <div id="saveModal" class ="modal">
+        <div class="modal-content">
+          <span id="closeBtn" class ="exit">&times;</span>
+          <h3>Here is your last saved workout!</h3>
+          <h4>Day 1 workout:</h4>
+          <p id ="savedDay1"> </p>
+          <h4>Day 2 workout:</h4>
+          <p id ="savedDay2"> </p>
+          <h4>Day 3 workout:</h4>
+          <p id ="savedDay3"></p>
+          <h4>Day 4 workout:</h4>
+          <p id ="savedDay4"></p>
+          <h4>Day 5 workout:</h4>
+          <p id ="savedDay5"></p>
+          <h4>Day 6 workout:</h4>
+          <p id ="savedDay6"></p>
+          <h4>Day 7 workout:</h4>
+          <p id ="savedDay7"></p>
+        </div>
+      </div>
+  
+    </main>
 
 <!-- generated workout -->
   <section class="card w-100">

@@ -146,16 +146,11 @@ function createWorkout() {
          friSplit.append(...cooldown);
       }else if(stretchInput === "") {
          alert("Cooldown: Yes or no?")
-         // fillRequest()
       }else{
          monSplit.append("No cooldown")
          wedSplit.append("No cooldown")
          friSplit.append("No cooldown")
       }
-   //  function fillRequest(){
-   //    modal
-   //  }
-
 
     
       var finalWorkoutDay1 = firstDay     
