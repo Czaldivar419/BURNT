@@ -6,6 +6,7 @@ var day4=moment().add(3,'days');
 var day5=moment().add(4,'days');
 
 
+submitButton.addEventListener('click', createWorkout);
 
 function createWorkout() {
 
@@ -145,55 +146,86 @@ function createWorkout() {
          friSplit.append(...cooldown);
       }else if(stretchInput === "") {
          alert("Cooldown: Yes or no?")
+         // fillRequest()
       }else{
          monSplit.append("No cooldown")
          wedSplit.append("No cooldown")
          friSplit.append("No cooldown")
       }
+   //  function fillRequest(){
+   //    modal
+   //  }
 
 
-
-
+    
+      var finalWorkoutDay1 = firstDay     
+      var finalWorkoutDay2 = restDay  
+      var finalWorkoutDay3 = secondDay   
+      var finalWorkoutDay4 =  restDay
+      var finalWorkoutDay5 =  thirdDay
+      
+    
+       localStorage.setItem("Your Saved Workout Day 1", JSON.stringify(finalWorkoutDay1));
+       localStorage.setItem("Your Saved Workout Day 2", JSON.stringify(finalWorkoutDay2));
+       localStorage.setItem("Your Saved Workout Day 3", JSON.stringify(finalWorkoutDay3));
+       localStorage.setItem("Your Saved Workout Day 4", JSON.stringify(finalWorkoutDay4));
+       localStorage.setItem("Your Saved Workout Day 5", JSON.stringify(finalWorkoutDay5));
+      
+}
 
       
-      // function renderMessage() {
-      //    var storedDayOne = JSON.parse(localStorage.getItem("Your Saved Workout"));
-
-      //    if (storedDayOne !== null) {
-      //       document.querySelector("#mon-plan").textContent = monSplit
-      //     } 
-
-      //    if (storedDayTwo !== null) {
-      //       document.querySelector("#tues-plan").textContent = tuesSplit
-      //     }
-        
-      //    if (storedDayThree !== null) {
-      //       document.querySelector("#wed-plan").textContent = wedSplit
-      //    }
-      //    if (storedDayFour !== null) {
-      //       document.querySelector("#thr-plan").textContent = thrSplit
-      //     }
-      //    if (storedDayFive !== null) {
-      //       document.querySelector("#fri-plan").textContent = friSplit
-      //     }
-    
-    
-      var finalWorkout = {
-         Today: firstDay,
-         Tomorrow: restDay,
-         ThreeDays: secondDay,
-         RestDay2: restDay,
-         FinalDay:thirdDay
-
-       };
-    
-   
-    localStorage.setItem("Your Saved Workout", JSON.stringify(finalWorkout));
 
 
+
+var modal=document.getElementById("saveModal");
+var saveButton = document.getElementById('save-button');
+var closeButton= document.getElementById("closeBtn")[0];
+
+saveButton.addEventListener('click', openModal);
+function openModal(){
+   modal.style.display= 'block';
+   renderMessage()
 }
 
 
+closeBtn.addEventListener('click', closeModal);
+function closeModal(){
+   modal.style.display= 'none';
+}
 
-submitButton.addEventListener('click', createWorkout);
 
+window.addEventListener('click', outsideClick)
+function outsideClick(event){
+   if(event.target == modal){
+   modal.style.display= 'none';
+   }
+}
+
+
+function renderMessage() {
+   
+   var storedDayOne = JSON.parse(localStorage.getItem("Your Saved Workout Day 1"));
+   var storedDayTwo= JSON.parse(localStorage.getItem("Your Saved Workout Day 2"));
+   var storedDayThree = JSON.parse(localStorage.getItem("Your Saved Workout Day 3"));
+   var storedDayFour = JSON.parse(localStorage.getItem("Your Saved Workout Day 4"));
+   var storedDayFive = JSON.parse(localStorage.getItem("Your Saved Workout Day 5"));
+   
+   if ( storedDayOne !== null) {
+      document.querySelector("#savedDay1").textContent =  storedDayOne
+    } 
+
+   if (storedDayTwo !== null) {
+      document.querySelector("#savedDay2").textContent = storedDayTwo
+    }
+  
+   if (storedDayThree !== null) {
+      document.querySelector("#savedDay3").textContent =storedDayThree
+   }
+   if (storedDayFour !== null) {
+      document.querySelector("#savedDay4").textContent =storedDayFour
+    }
+   if (storedDayFive !== null) {
+      document.querySelector("#savedDay5").textContent = storedDayFive
+    };
+
+   };
