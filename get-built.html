@@ -31,39 +31,35 @@
 
 <main class="content main">
 
-    <div class="card-body inputs container is-fluid is-center">
-      <h1 class="card-header main" id="bold">Enter your one rep maxes for a customized workout plan!</h1>
-    </div>  
-
-    <div class="card-body calculator container is-center header-card">
+    <div class="card-body container is-center calc-header">
       <h1 class="card-header is-center main">Enter your one rep maxes for a customized workout plan!</h1>
     </div>  
+    <!-- calculator inputs as a table -->
+      <table class="table is-fullwidth">
+        
+        <tr>
+        <!-- Bench Inputs -->
+          <td class="text-cool">Bench Press</td>
+          <td><input type="bench-press" class="input is-warning is-medium" id="bench" placeholder="Ex. 225"></td>
+        </tr>
+        <tr>
+          <!-- Squat Inputs -->
+          <td class="text-cool">Squat</td>
+          <td><input type="squat" class="input is-warning is-medium" id="squat" placeholder="Ex. 315"></td>
+        </tr>
+        <tr>
+          <!-- Deadlift Input -->
+          <td class="text-cool">Deadlift Input</td>
+          <td><input type="deadlift" class="input is-warning is-medium" id="deadlift" placeholder="Ex. 315"></td>
+        </tr>
+        <tr>
+          <!-- Curl Input -->
+          <td class="text-cool">Curl Input</td>
+          <td><input type="curl" class="input is-warning is-medium" id="curl" placeholder="Ex. 135"></td>
+        </tr>
+
+      </table>
     
-    <!-------------calculator inputs------------->
-      <section class="box"> 
-        <!-- Bench Press Input-->
-        <div class="bench inline">
-          <h3 class="card-header text-left">Bench Press</label>
-          <input type="bench-press" class="input is-danger is-medium" id="bench" placeholder="Ex. 225">
-        </div>
-        <!--Squat Input-->
-        <div class="squat inline"> 
-          <h3 class="card-header text-left">Squat</label>
-          <input type="squat" class="input is-danger is-medium" id="squat" placeholder="Ex. 315">
-        </div>
-         <!--Deadlift Input-->
-        <div class="deadlift inline"> <!--Deadlift Input-->
-          <h3 class="card-header text-left">Deadlift</label>
-          <input type="deadlift" class="input is-danger is-medium" id="deadlift" placeholder="Ex. 315">
-        </div>
-        <!--Curl Input-->
-        <div class="curl inline"> <!--Curl Input-->
-          <h3 class="card-header text-left">Bicep Curl</h3>
-          <input type="curl" class="input is-danger is-medium" id="curl" placeholder="Ex. 135">
-        </div>
-
-      </section>
-
       <button id="submit-button" class="button is-large calc-btn">CLICK TO GET BURNT</button>
 
 </main>
