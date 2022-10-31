@@ -3,32 +3,30 @@
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
 
-var x = document.getElementById("demo");
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
-}
-
-
-getLocation();
-
 
 function initMap() {
   // Create the map.
 
+  var x = document.getElementById("demo");
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  
+  
+  function showPosition(position) {
+
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    console.log(lat);
+    console.log(lng);
 
 
-  const pyrmont = { lat: 34.9592083, lng: -116.419389 };
+
+  var where = ( "lat: " + lat + ", " + "lng: " + lng )
   const map = new google.maps.Map(document.getElementById("map"), {
-    center: pyrmont,
+    center: location,
     zoom: 17,
     mapId: "8d193001f940fde3",
   });
@@ -46,7 +44,7 @@ function initMap() {
 
   // Perform a nearby search.
   service.nearbySearch(
-    { location: pyrmont, radius: 50000, type: "gym" },
+    { location: where, radius: 50000, type: "gym" },
     (results, status, pagination) => {
       if (status !== "OK" || !results) return;
 
@@ -92,7 +90,7 @@ function addPlaces(places, map) {
     }
   }
 }
-
+}
 
 window.initMap = initMap;
 
