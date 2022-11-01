@@ -46,7 +46,8 @@ ul {
     justify-content: space-between;
     list-style: none;
     text-transform: uppercase;
-    /* letter-spacing: 1px; */
+    letter-spacing: 1px;
+    padding-right: 5%;
 }
 .main-nav > li {
     display: flex;
@@ -89,6 +90,7 @@ li :hover {
     margin-left: 275px;
     text-transform: none;
     margin-top: 10px;
+    padding-bottom: 1%;
 }
 
 #workouts {
@@ -152,7 +154,8 @@ hr {
 }
 
 .copyright {
-    margin-right: 1px;
+    /* margin-right: 1px; */
+    margin-left: 2%;
 }
 
 .social-icons {
@@ -271,4 +274,11 @@ hr {
 
 .workout-header {
     text-align: center;
+}
+
+.brand-title {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 20px; */
+    align-items: center;
 }
