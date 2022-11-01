@@ -1,14 +1,25 @@
+:root {
+    --light: #efefef;
+    --dark:  #03071E;
+    --light-orange:  #FAA307;
+    --dark-orange:  #E85D04;
+    --burnt-yellow: yellow;
+    --font-color:  #101010;
+}
+* {
+    font-family: 'Rubik', sans-serif;
+}
 body {
     background-color: #efefef;
     /* color: #FAA307; */
-    color: #101010;
+    color: var(--font-color);
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
 }
 
 .Nav-container {
-    background-color: #03071E;
-    color: #FAA307;
+    background-color: var(--dark);
+    color: var(--light-orange);
 }
 
 .brand-title {
@@ -30,38 +41,42 @@ label {
     margin-right: 860px;
 }
 
-.nav-container {
-    display: flex;
-}
-
 ul {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     list-style: none;
-    padding: 10px;
-    padding-right: 40px;
     text-transform: uppercase;
     /* letter-spacing: 1px; */
 }
-
+.main-nav > li {
+    display: flex;
+    justify-content: flex-end; 
+}
 li a {
     text-decoration: none;
-    color: #FAA307;
+    color: var(--light-orange);
     font-weight: bold;
     font-size: 19px;
     padding-left: 50px;
 }
 li :hover {
-    color: #E85D04;
-    text-decoration: none;
+    color: var(--burnt-yellow);
+    text-decoration: none; 
 }
 
 .article {
     display: flex;
     justify-content: space-around;
-    padding-top: 50px;
+    padding: 5%;
+
 }
 
+.our-mission {
+    font-size: 95%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 50%;
+}
 .info-container {
     /* border: 1px solid black; */
     display: flex;
@@ -98,6 +113,8 @@ li :hover {
 .social-media {
     display: flex;
     justify-content: space-around;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 #instagram {
@@ -181,4 +198,77 @@ hr {
     p {
         align-items: center;
     }
+}
+
+/* media query section */
+/* 390px nav burger media query */
+.burgerbar {
+    display: none;
+}
+
+.Nav-container {
+    width:100%;
+}
+
+@media only screen and (max-width: 390px) {
+    .burgerbar {
+        display: block;
+    }
+    .Nav-container {
+        display: none;
+    }
+}
+/*  Leann's calculator section */
+.main { 
+ text-align: center;
+ padding: 2%;
+ font-family: 'Rubik', sans-serif;
+}
+.calc-header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--light);
+    border-color: var(--light);
+    text-align: center;
+}
+.header-card > h1 {
+    color: var(--dark);
+}
+
+/* calculator input styling */
+.text-cool {
+    font-size: 98%;
+    font-weight: bold;
+    width: 10%;
+    padding-top: 50%;
+    margin: auto;
+}
+.text-cool2 {
+    font-size: 95%;
+    font-weight: bold;
+    width: 20%;
+    padding: 5%;
+    margin: auto;
+}
+.flexible {
+    display: flex; 
+    align-items: center;
+}
+.calc-btn {
+    background-color: var(--light-orange);
+    color: var(--font-color);
+    font-weight:bold;
+}
+.calc-btn :hover{
+    outline: none;
+    border: yellow;
+    box-shadow: 0 0 10px yellow;
+}
+
+.workout-card {
+    padding: 10%;
+}
+
+.workout-header {
+    text-align: center;
 }
