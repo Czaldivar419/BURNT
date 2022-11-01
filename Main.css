@@ -45,15 +45,12 @@ ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding-top:2%;
-    padding-right: 5%;
     text-transform: uppercase;
     /* letter-spacing: 1px; */
 }
 .main-nav > li {
     display: flex;
     justify-content: flex-end; 
-    padding-right: 5%;
 }
 li a {
     text-decoration: none;
