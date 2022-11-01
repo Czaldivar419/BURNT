@@ -44,7 +44,7 @@ label {
     border-radius: 10%;
 
 }
-.burnt:hover{
+.bLogo:hover{
     color: #111; 
     background: #FFBA08; 
     box-shadow: 0 0 100px #FFBA08; 
@@ -251,4 +251,10 @@ hr {
 
 .workout-header {
     text-align: center;
+}
+
+.social-media{
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
 }
