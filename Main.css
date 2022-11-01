@@ -128,6 +128,32 @@ hr {
     width: 90%;
 }
 
+.footer-container {
+    display: flex;
+    justify-content: start;
+    padding-top: 35px;
+}
+
+.copyright {
+    margin-right: 1px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: end;
+    margin-top: -45px;
+}
+
+.instagram-logo {
+    padding-right: 25px;
+}
+
+.twitter-logo {
+    padding-right: 100px;
+}
+
+
+
 @media only screen and (max-width: 390px) {
     .burgerbar {
         display: block;
