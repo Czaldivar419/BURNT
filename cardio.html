@@ -5,15 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Sweaty Workout Program</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="Main.css">
-    <link rel="stylesheet" href="breakpointmain.css">
+    <!-- Moment API -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="./Main.css">
+    <link rel="stylesheet" href="./modal.css">
 </head>
 <body>
   <nav class="Nav-container">
+    <div class="brand-title">
+    <a href="homepage.html" class="homepage"> 
+    <img class="bLogo" src="burnt.png" alt="burntLogo" width="100px" height="100px">
+    </a>  
+    <h2 class="burnt">URNT</h2> 
     <ul>
-        <label for="logo"></label>
-        <img src="Burnt.png" alt="Logo" width="100px" height="100px">
+        <!-- <label for="logo"></label> -->
+        <!-- <img src="Burnt.png" alt="Logo" width="100px" height="100px"> -->
         <li><a href="toning-calc.html">Tone Up</a></li>
         <li><a href="get-built.html">Get Built</a></li>
         <li><a href="cardio.html">Get Sweaty</a></li>
@@ -24,13 +34,20 @@
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
+
     </a>
+    <div class="navbar-menu" id="navMenu">
+      <!-- navbar-start, navbar-end... -->
+      <a href="toning-calc.html"></a>
+      <a href="get-built.html"></a>
+      <a href="cardio.html"></a>
+    </div>
 </nav>
 
   <main class="content is-fluid">
     
     <div class="card-body inputs container is-fluid">
-      <h1 class="card-header">Enter your one rep maxes for a customized workout plan!</h1>
+      <h1 class="card-header">Enter the following info for a customized Cardio workout plan!</h1>
     </div>
 
       <section class="steps card"> <!-- Steps Input-->
@@ -60,7 +77,35 @@
           <input type="stretch" class="input is-medium" id="stretch" placeholder="Ex. Yes or No">
       </section>
 
-      <button id="submit-button" class="button is-danger is-large">CLICK TO GET BURNT</button>
+      <!-- cooldown modal -->
+
+      <div class="stretchModal">
+        <!-- <div class="modal-background"></div>
+        <div class="modal-content">
+          Remember stretching is importent!
+        </div> -->
+        <button id="submit-button" class="button">CLICK TO GET BURNT</button>
+      </div>
+
+<!-- modal for saved workouts -->
+      <button id="save-button"  class="lastWorkoutButton" class="button"> Last burn!</button>
+
+      <div id="saveModal" class ="modal">
+        <div class="modal-content">
+          <span id="closeBtn" class ="exit">&times;</span>
+          <h3>Here is your last saved workout!</h3>
+          <h4>Day 1 workout:</h4>
+          <p id ="savedDay1"> </p>
+          <h4>Day 2 workout:</h4>
+          <p id ="savedDay2"> </p>
+          <h4>Day 3 workout:</h4>
+          <p id ="savedDay3"></p>
+          <h4>Day 4 workout:</h4>
+          <p id ="savedDay4"></p>
+          <h4>Day 5 workout:</h4>
+          <p id ="savedDay5"></p>
+        </div>
+      </div>
 
   </main>
   
@@ -88,61 +133,13 @@
           <h3 id="fri"></h3>
             <p id="fri-plan"></p>
 
-          <h3 id="sat"></h3>
-            <p id="sat-plan"></p>
 
-          <h3 id="sun"></h3>
-            <p id="sun-plan"></p>
 
 
         </div>
       </div>
-     
-
-
-      <!-- <div class="col sm-1 sec">
-        <div class="card workout sec">
-          <div class="card-body">
-
-            <div id="workout-header">
-              <h2 id="split-title"></h2>
-            </div>
-
-            <div id="days">
-
-              <h3 id="mon"></h3>
-                <p id="mon-plan"></p>
-            
-              <h3 id="tues"></h3>
-                <p id="tues-plan"></p>
-
-              <h3 id="wed"></h3>
-                <p id="wed-plan"></p>
-
-              <h3 id="thr"></h3>
-                <p id="thr-plan"></p>
-
-              <h3 id="fri"></h3>
-                <p id="fri-plan"></p>
-
-              <h3 id="sat"></h3>
-                <p id="sat-plan"></p>
-
-              <h3 id="sun"></h3>
-                <p id="sun-plan"></p>
-
-
-            </div>
-          </div>
-        </div> -->
-
-
-        <!-- </div> -->
-      </section>
-    
-
-<!-- <script src="moment.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    </div>
+  </section>   
 <script src="./cardio.js"></script>
 </body>
 </html>

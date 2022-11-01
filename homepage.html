@@ -11,59 +11,102 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./Main.css">
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="burnt.png" alt="burntLogo" width="100px" height="100px">
-        <nav class="nav-container">
-            <label class="brand-title">URNT</label>
-            <ul class="nav-links">
-                <li><a href="toning-calc.html">Tone Up</a></li>
-                <li><a href="get-built.html">Get Built</a></li>
-                <li><a href="cardio.html">Get Sweaty</a></li>
-            </ul>
-        </nav>
-        <nav class="burgerbar">
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-            <div class="navbar-menu" id="navMenu">
-                <!-- navbar-start, navbar-end... -->
-                <div class="container" onclick="myFunction(this)">
-                    <div class="bar1" href="toning-cal.html">Tone Up</div>
-                    <div class="bar2" href="get-built.html">Get Built</div>
-                    <div class="bar3" href="cardio.html">Get Sweaty</div>
-                  </div>
-              </div>
-        </nav>
-    </header>
+    <nav class="Nav-container">
+        <div class="brand-title"><img class="bLogo" src="burnt.png" alt="burntLogo" width="100px" height="100px"><h2 class="burnt">URNT</h2>
+        <ul class="main-nav">
+            <li><a href="toning-calc.html">Tone Up</a></li>
+            <li><a href="get-built.html">Get Built</a></li>
+            <li><a href="cardio.html">Get Sweaty</a></li>
+        </ul>
+        </div>
+    </nav>
+    <nav class="burgerbar">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+
+        <div class="navbar-menu" id="navMenu">
+            <!-- navbar-start, navbar-end... -->
+            <a href="toning-calc.html"></a>
+            <a href="get-built.html"></a>
+            <a href="cardio.html"></a>
+          </div>
+    </nav>
+
     <article class="article">
         <div class="our-mission" style="width: 20%;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-            </p>
+            <h1>About</h1>
+            <p> Burnt™ was founded in the fall of 2022 by five life-long friends with a passion for fitness. Burnt is the premiere workout routine building website that will help reach your fitness goals 
+                no matter where you are in your fitness journey.
+                    <br>
+                    <br>
+                We offer 3 programs to help you reach your specific goals:
+                <br>
+                <br>
+                1. Tone Up–tighten up the muscles and give them shape.
+                <br>
+                2. Get Built–increase muscle mass and make your muscles bigger.
+                <br>
+               3. Get Sweaty–lose weight and burn fat.
+                <br>
+                <br>
+                After you pick your program, we’ll build your fitness routine for you. You can complete your workout routine from the comfort of your home, 
+                or at the gym near you. Are you ready to get BURNT?
+                </p>
         </div>
         <figure class="photos">
-            <div class="workout-image"><img src="./photos/man-2604149__340.jpg" style="width: 100%;"></div>
+                <div class="workout-image"><img src="./photos/istockphoto-1225752911-612x612.jpg" alt="Woman climbing rope in gym"  style="width: 100%;"></div>
         </figure>
     </article>
-    <footer>
-        <!--Dummy icons for social media-->
-        <div class="social-media">
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-        </div>
-    </footer>
+
+<section class="info-container">
+    <ul class="list-container">
+        <li id="users">55K+</li>
+        <li id="workouts">300+</li>
+    </ul>
+</section>
+
+<ul class="p-container">
+    <li id="current-users">Current Users</li>
+    <li id="variety">Variety of Workouts</li>
+</ul>
+<hr>
+
+<header class="social-media">
+        <ul class="social-list">
+            <li id="instagram"><h2>Instagram</h2></li>
+            <li id="slogan"><h2>#GETBURNT</h2></li>
+        </ul>
+    </div>
+</header>
+
+<section class="text-container">
+    <p class="textEL">Get burnt on instagram with thousands of others!#GETBURNT</p>
+    <a class="icon" href="#" class="fa fa-instagram"></a>
+
+</section>
+
+<section class="instagram-users">
+    <div class="group-workout"><img src="./photos/istockphoto-1254766830-612x612.jpg" style="width: 75%;"></div>
+    <div class="happy-sam"><img src="./photos/istockphoto-1163928944-612x612.jpg" style="width: 75%;"></div>
+    <div class="uncle-sam"><img src="./photos/istockphoto-1220943932-612x612.jpg" style="width: 75%;"></div>
+    <div class="the-samuels"><img src="./photos/istockphoto-1131883035-612x612.jpg" style="width: 75%;"></div>
+</section>
+
+<footer>
+    <div class="social-media">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+</footer>
 </body>
 
 </html>
