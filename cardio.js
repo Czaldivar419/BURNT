@@ -58,7 +58,7 @@ function createWorkout() {
 //-------------------------------------------Today--------------------------------------------------------
    var mon = document.getElementById("mon");
 
-   var dayOne = today.format("[Workout for:] dddd")
+   var dayOne = today.format("dddd")
    mon.textContent=dayOne;
 
       let monSplit = document.querySelector("#mon-plan")
@@ -75,7 +75,7 @@ function createWorkout() {
 //-------------------------------------------Day2---------------------------------------------------------
    
    var tues = document.getElementById("tues");
-   var dayTwo = day2.format("[Workout for:] dddd")
+   var dayTwo = day2.format("dddd")
    tues.textContent=dayTwo;
 
       let tuesSplit = document.querySelector("#tues-plan")
@@ -91,7 +91,7 @@ function createWorkout() {
 // -------------------------------------------Day3---------------------------------------------------------
    
    var wed = document.getElementById("wed");
-   var dayThree = day3.format("[Workout for:] dddd")
+   var dayThree = day3.format("dddd")
    wed.textContent=dayThree;
 
       let wedSplit = document.querySelector("#wed-plan")
@@ -107,7 +107,7 @@ function createWorkout() {
 
 
    var thr = document.getElementById("thr");
-   var dayFour = day4.format("[Workout for:] dddd")
+   var dayFour = day4.format("dddd")
    thr.textContent=dayFour;
 
       let thrSplit = document.querySelector("#thr-plan")
@@ -123,7 +123,7 @@ function createWorkout() {
 // -----------------------------------------Day5----------------------------------------------------------------------
 
    var fri = document.getElementById("fri");
-   var dayFive = day5.format("[Workout for:] dddd")
+   var dayFive = day5.format("dddd")
    fri.textContent=dayFive;
 
       let friSplit = document.querySelector("#fri-plan")

@@ -11,8 +11,9 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
     ></script>
     <!-- style sheet link -->
-    <link rel="stylesheet" href="./Main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="./Main.css">
 </head>
 <body>
   <nav class="Nav-container">
@@ -72,7 +73,7 @@
         <div class="modal-content">
           Remember stretching is importent!
         </div> -->
-        <button id="submit-button" class="button">CLICK TO GET BURNT</button>
+        <button id="submit-button" class="button is-large calc-btn">CLICK TO GET BURNT</button>
       </div>
 
 <!-- modal for saved workouts -->
@@ -97,29 +98,37 @@
 
   </main>
   
-  <section class="card w-100">
-    <div class="card-body">
+  <section class="card">
+    <div class="card-body workout-card">
 
         <div id="workout-header">
-          <h2 id="split-title"></h2>
+          <h2 id="split-title" class="title is-1 workout-header"></h2>
         </div>
 
         <div id="days">
 
-          <h3 id="mon"></h3>
+          
+          <h3 id="mon" class="title is-2 day-card"></h3>
             <p id="mon-plan"></p>
         
-          <h3 id="tues"></h3>
+          <h3 id="tues" class="title is-2"></h3>
             <p id="tues-plan"></p>
 
-          <h3 id="wed"></h3>
+          <h3 id="wed" class="title is-2"></h3>
             <p id="wed-plan"></p>
 
-          <h3 id="thr"></h3>
+          <h3 id="thr" class="title is-2"></h3>
             <p id="thr-plan"></p>
 
-          <h3 id="fri"></h3>
+          <h3 id="fri" class="title is-2"></h3>
             <p id="fri-plan"></p>
+
+          <h3 id="sat" class="title is-2"></h3>
+            <p id="sat-plan"></p>
+
+          <h3 id="sun" class="title is-2"></h3>
+            <p id="sun-plan"></p>
+
 
 
 

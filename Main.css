@@ -45,15 +45,12 @@ ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding-top:2%;
-    padding-right: 5%;
     text-transform: uppercase;
     /* letter-spacing: 1px; */
 }
 .main-nav > li {
     display: flex;
     justify-content: flex-end; 
-    padding-right: 5%;
 }
 li a {
     text-decoration: none;
@@ -213,9 +210,6 @@ hr {
 }
 
 /* calculator input styling */
-.widemama {
-    width: 100%;
-}
 .text-cool {
     font-size: 98%;
     font-weight: bold;
@@ -223,12 +217,21 @@ hr {
     padding-top: 50%;
     margin: auto;
 }
-.inline {
-    display: inline;
+.text-cool2 {
+    font-size: 95%;
+    font-weight: bold;
+    width: 20%;
+    padding: 5%;
+    margin: auto;
+}
+.flexible {
+    display: flex; 
+    align-items: center;
 }
 .calc-btn {
     background-color: var(--light-orange);
     color: var(--font-color);
+    font-weight:bold;
 }
 .calc-btn :hover{
     outline: none;
