@@ -37,30 +37,35 @@
     <div class="card-body container is-center calc-header">
       <h1 class="card-header is-center main">Enter your one rep maxes to get toned!</h1>
     </div>  
-    <!-- calculator inputs as a table -->
-    <table class="table is-fullwidth">
 
-      <tr>
-      <!-- Bench Inputs -->
-        <td class="text-cool">Bench Press</td>
-        <td><input type="bench-press" class="input is-warning is-medium" id="bench" placeholder="Ex. 225"></td>
-      </tr>
-      <tr>
-        <!-- Squat Inputs -->
-        <td class="text-cool">Squat</td>
-        <td><input type="squat" class="input is-warning is-medium" id="squat" placeholder="Ex. 315"></td>
-      </tr>
-      <tr>
-        <!-- Deadlift Input -->
-        <td class="text-cool">Deadlift Input</td>
-        <td><input type="deadlift" class="input is-warning is-medium" id="deadlift" placeholder="Ex. 315"></td>
-      </tr>
-      <tr>
-        <!-- Curl Input -->
-        <td class="text-cool">Curl Input</td>
-        <td><input type="curl" class="input is-warning is-medium" id="curl" placeholder="Ex. 135"></td>
-      </tr>
-      </table>
+
+    <section class="bench card"> <!-- Bench Press Input-->
+      <h3  class="card-header">Bench Press</h2>
+      <div class="col-sm-4">
+        <input type="bench-press" class="input is-medium" id="bench" placeholder="Ex. 225">
+      </div>
+    </section>
+    
+    <section class="squat card"> <!--Squat Input-->
+      <h3  class="card-header">Squat</h2>
+      <div class="col-sm-4">
+        <input type="squat" class="input is-medium" id="squat" placeholder="Ex. 315">
+      </div>
+    </section>
+
+    <section class="deadlift card"> <!--Deadlift Input-->
+      <h3 class="card-header">Deadlift</h2>
+      <div class="col-sm-4">
+        <input type="deadlift" class="input is-medium" id="deadlift" placeholder="Ex. 315">
+      </div>
+    </section>
+
+    <section class="curl card"> <!--Curl Input-->
+      <h3  class="card-header">Biecp Curl</h2>
+      <div class="col-sm-4">
+        <input type="curl" class="input is-medium" id="curl" placeholder="Ex. 135">
+    </section>
+   
       <!-- button to submit all rep weights into calculator -->
       <button id="submit-button" class="button is-danger is-large is-center">CLICK TO GET BURNT</button>
       
