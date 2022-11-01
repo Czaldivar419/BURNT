@@ -1,6 +1,11 @@
 var submitButton = document.getElementById('submit-button');
-
-
+var today = moment();
+var day2=moment().add(1,'days');
+var day3=moment().add(2,'days');
+var day4=moment().add(3,'days');
+var day5=moment().add(4,'days');
+var day6=moment().add(5,'days');
+var day7=moment().add(6,'days');
 
 
 function createWorkout() {
@@ -19,35 +24,35 @@ function createWorkout() {
    // Workout Splits
 
    let chestDay = [
-      "Barbell Bench Press, 4x12: " + (.8 * benchPress) + ("lbs"),
-      "Incline Dumbell Press, 4x15: " + (.25 * benchPress) + ("lbs"),
-      "Incline Dumbell Flyes, 4x15: " + (.15 * benchPress) + ("lbs"),
-      "Hammer Strength Decline Press, 4x10: " + (.4 * benchPress) + ("lbs"),
-      "Hammer Strength Pec Flyes, 4x12: " + (.5 * benchPress) + ("lbs")
+      "Barbell Bench Press, 4x12: " + Math.ceil(.8 * benchPress) + ("lbs"),
+      "Incline Dumbell Press, 4x15: " + Math.ceil(.25 * benchPress) + ("lbs"),
+      "Incline Dumbell Flyes, 4x15: " + Math.ceil(.15 * benchPress) + ("lbs"),
+      "Hammer Strength Decline Press, 4x10: " + Math.ceil(.4 * benchPress) + ("lbs"),
+      "Hammer Strength Pec Flyes, 4x12: " + Math.ceil(.5 * benchPress) + ("lbs")
    ];
 
    let legDay = [
-      "Barbell Squat, 4x8: " + (.8 * squatInput) + ("lbs"),
-      "Leg Extensions, 4x12: " + (.5 * squatInput) + ("lbs"),
-      "Hack Squat, 4x10: " + (.9 * squatInput) + ("lbs"),
-      "Goblet Squats, 4x15: " + (.2 * squatInput) + ("lbs"),
-      "Seated Calf Raises, 4x15: " + (.15 * squatInput) + ("lbs"),
+      "Barbell Squat, 4x8: " + Math.ceil(.8 * squatInput) + ("lbs"),
+      "Leg Extensions, 4x12: " + Math.ceil(.5 * squatInput) + ("lbs"),
+      "Hack Squat, 4x10: " + Math.ceil(.9 * squatInput) + ("lbs"),
+      "Goblet Squats, 4x15: " + Math.ceil(.2 * squatInput) + ("lbs"),
+      "Seated Calf Raises, 4x15: " + Math.ceil(.15 * squatInput) + ("lbs"),
    ]
 
    let backDay = [
-      "T Bar Rows, 4x12: " + (.65 * deadliftInput) + ("lbs"),
-      "Lat Pull Downs, 4x12: " + (.5 * deadliftInput) + ("lbs"),
-      "Seated Cable Rows, 4x8: " + (.5 * deadliftInput) + ("lbs"),
-      "Barbell Shrugs, 4x12: " + (.7 * deadliftInput) + ("lbs"),
-      "Underhand Barbell Rows, 4x10: " + (.58 * deadliftInput) + ("lbs"),
+      "T Bar Rows, 4x12: " + Math.ceil(.65 * deadliftInput) + ("lbs"),
+      "Lat Pull Downs, 4x12: " + Math.ceil(.5 * deadliftInput) + ("lbs"),
+      "Seated Cable Rows, 4x8: " + Math.ceil(.5 * deadliftInput) + ("lbs"),
+      "Barbell Shrugs, 4x12: " + Math.ceil(.7 * deadliftInput) + ("lbs"),
+      "Underhand Barbell Rows, 4x10: " + Math.ceil(.58 * deadliftInput) + ("lbs"),
    ]
 
    let armDay = [
-      "Barbell Bicep Curls, 4x12: " + (.5 * curlInput) + ("lbs"),
-      "Overhead Tricep Extension, 4x10: " + (.6 * curlInput) + ("lbs"),
-      "Tricep Cable Pushdowns, 4x12: " + (.4 * curlInput) + ("lbs"),
-      "Bicep Cable Curls, 4x12: " + (.5 * curlInput) + ("lbs"),
-      "Preacher Curls, 4x10: " + (.65 * curlInput) + ("lbs"),
+      "Barbell Bicep Curls, 4x12: " + Math.ceil(.5 * curlInput) + ("lbs"),
+      "Overhead Tricep Extension, 4x10: " + Math.ceil(.6 * curlInput) + ("lbs"),
+      "Tricep Cable Pushdowns, 4x12: " + Math.ceil(.4 * curlInput) + ("lbs"),
+      "Bicep Cable Curls, 4x12: " + Math.ceil(.5 * curlInput) + ("lbs"),
+      "Preacher Curls, 4x10: " + Math.ceil(.65 * curlInput) + ("lbs"),
    ]
 
    let restDay = [
@@ -57,17 +62,18 @@ function createWorkout() {
 
 // Workout Header
    var workoutTitle = document.getElementById("split-title");
-   var text = document.createTextNode("Your Custom Workout:");
-      workoutTitle.appendChild(text);
+   var text = "Your Custom Workout:";
+   workoutTitle.textContent=text;
 
 
 //-------------------------------------------Monday--------------------------------------------------------
    
    var mon = document.getElementById("mon");
-   var monText = document.createTextNode("Monday:");
-      mon.appendChild(monText);
+   var monText =  today.format("[Workout for:] dddd")
+   mon.textContent=monText;
 
       let monSplit = document.querySelector("#mon-plan")
+      monSplit.innerHTML= ""
       let chestWo = chestDay.map(chestDay => {
          let li = document.createElement("li");
          li.textContent = chestDay;
@@ -78,10 +84,11 @@ function createWorkout() {
 //-------------------------------------------Tuesday---------------------------------------------------------
    
    var tues = document.getElementById("tues");
-   var tuesText = document.createTextNode("Tuesday:");
-      tues.appendChild(tuesText);
+   var tuesText =  day2.format("[Workout for:] dddd")
+   tues.textContent=tuesText;
 
       let tuesSplit = document.querySelector("#tues-plan")
+      tuesSplit.innerHTML= ""
       let tuesWo = restDay.map(restDay => {
          let li = document.createElement("li");
          li.textContent = restDay;
@@ -92,10 +99,11 @@ function createWorkout() {
 // -------------------------------------------Wednesday---------------------------------------------------------
    
    var wed = document.getElementById("wed");
-   var wedText = document.createTextNode("Wednesday:");
-      wed.appendChild(wedText);
+   var wedText = day3.format("[Workout for:] dddd")
+   wed.textContent=wedText;
 
       let wedSplit = document.querySelector("#wed-plan")
+      wedSplit.innerHTML= ""
       let legWo = legDay.map(legDay => {
          let li = document.createElement("li");
          li.textContent = legDay;
@@ -107,10 +115,11 @@ function createWorkout() {
 
 
    var thr = document.getElementById("thr");
-   var thrText = document.createTextNode("Thursday:");
-      thr.appendChild(thrText);
+   var thrText =  day4.format("[Workout for:] dddd")
+   thr.textContent=thrText;
 
       let thrSplit = document.querySelector("#thr-plan")
+      thrSplit.innerHTML= ""
       let thrWo = restDay.map(restDay => {
          let li = document.createElement("li");
          li.textContent = restDay;
@@ -122,10 +131,11 @@ function createWorkout() {
 // -----------------------------------------Friday----------------------------------------------------------------------
 
    var fri = document.getElementById("fri");
-   var friText = document.createTextNode("Friday:");
-      fri.appendChild(friText);
+   var friText = day5.format("[Workout for:] dddd")
+   fri.textContent=friText;
 
       let friSplit = document.querySelector("#fri-plan")
+      friSplit.innerHTML= ""
       let armWo = armDay.map(armDay => {
          let li = document.createElement("li");
          li.textContent = armDay;
@@ -136,10 +146,11 @@ function createWorkout() {
 //-----------------------------------Saturday-----------------------------------------------------------------------------
 
    var sat = document.getElementById("sat");
-   var satText = document.createTextNode("Saturday:");
-      sat.appendChild(satText);
+   var satText = day6.format("[Workout for:] dddd")
+   sat.textContent=satText;
 
       let satSplit = document.querySelector("#sat-plan")
+      satSplit.innerHTML= ""
       let satWo = restDay.map(restDay => {
          let li = document.createElement("li");
          li.textContent = restDay;
@@ -151,24 +162,102 @@ function createWorkout() {
 //-----------------------------------Sunday-----------------------------------------------------------------------------
 
    var sun = document.getElementById("sun");
-   var sunText = document.createTextNode("Sunday");
-      sun.appendChild(sunText);
+   var sunText = day7.format("[Workout for:] dddd")
+   sun.textContent=sunText;
 
       let sunSplit = document.querySelector("#sun-plan")
+      sunSplit.innerHTML= ""
       let backWo = backDay.map(backDay => {
          let li = document.createElement("li");
          li.textContent = backDay;
          return li;
       });
       sunSplit.append(... backWo);
+
+    
+      var finalWorkoutDay1 = chestDay     
+      var finalWorkoutDay2 = restDay  
+      var finalWorkoutDay3 = legDay   
+      var finalWorkoutDay4 =  restDay
+      var finalWorkoutDay5 =  armDay
+      var finalWorkoutDay6 =  restDay
+      var finalWorkoutDay7 =  backDay
+      
+    
+       localStorage.setItem("Your Saved Workout Day 1", JSON.stringify(finalWorkoutDay1));
+       localStorage.setItem("Your Saved Workout Day 2", JSON.stringify(finalWorkoutDay2));
+       localStorage.setItem("Your Saved Workout Day 3", JSON.stringify(finalWorkoutDay3));
+       localStorage.setItem("Your Saved Workout Day 4", JSON.stringify(finalWorkoutDay4));
+       localStorage.setItem("Your Saved Workout Day 5", JSON.stringify(finalWorkoutDay5));
+       localStorage.setItem("Your Saved Workout Day 6", JSON.stringify(finalWorkoutDay6));
+       localStorage.setItem("Your Saved Workout Day 7", JSON.stringify(finalWorkoutDay7));
+
+
 }
 
 
 
-
-
-
-
-
-
 submitButton.addEventListener('click', createWorkout);
+
+
+
+var modal=document.getElementById("saveModal");
+var saveButton = document.getElementById('save-button');
+var closeButton= document.getElementById("closeBtn")[0];
+
+saveButton.addEventListener('click', openModal);
+function openModal(){
+   modal.style.display= 'block';
+   renderMessage()
+}
+
+
+closeBtn.addEventListener('click', closeModal);
+function closeModal(){
+   modal.style.display= 'none';
+}
+
+
+window.addEventListener('click', outsideClick)
+function outsideClick(event){
+   if(event.target == modal){
+   modal.style.display= 'none';
+   }
+}
+
+
+function renderMessage() {
+   
+   var storedDayOne = JSON.parse(localStorage.getItem("Your Saved Workout Day 1"));
+   var storedDayTwo= JSON.parse(localStorage.getItem("Your Saved Workout Day 2"));
+   var storedDayThree = JSON.parse(localStorage.getItem("Your Saved Workout Day 3"));
+   var storedDayFour = JSON.parse(localStorage.getItem("Your Saved Workout Day 4"));
+   var storedDayFive = JSON.parse(localStorage.getItem("Your Saved Workout Day 5"));
+   var storedDaySix = JSON.parse(localStorage.getItem("Your Saved Workout Day 6"));
+   var storedDaySeven = JSON.parse(localStorage.getItem("Your Saved Workout Day 7"));
+   
+   if ( storedDayOne !== null) {
+      document.querySelector("#savedDay1").textContent =  storedDayOne
+    } 
+
+   if (storedDayTwo !== null) {
+      document.querySelector("#savedDay2").textContent = storedDayTwo
+    }
+  
+   if (storedDayThree !== null) {
+      document.querySelector("#savedDay3").textContent =storedDayThree
+   }
+   if (storedDayFour !== null) {
+      document.querySelector("#savedDay4").textContent =storedDayFour
+    }
+   if (storedDayFive !== null) {
+      document.querySelector("#savedDay5").textContent = storedDayFive
+    };
+    if (storedDaySix !== null) {
+      document.querySelector("#savedDay6").textContent = storedDaySix
+    };
+    if (storedDaySeven !== null) {
+      document.querySelector("#savedDay7").textContent = storedDaySeven
+    };
+
+   };
