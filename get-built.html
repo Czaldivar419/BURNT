@@ -6,99 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Built Workout Program</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./breakpointmain.css">
     <link rel="stylesheet" href="./Main.css">
 </head>
     
 <body>
-<main class="content"> 
 
-    <nav class="Nav-container">
-        <ul>
-            <label for="logo"></label>
-            <img src="Burnt.png" alt="burntLogo" width="100px" height="100px">
-            <li><a href="toning-calc.html">Tone Up</a></li>
-            <li><a href="get-built.html">Get Built</a></li>
-            <li><a href="cardio.html">Get Sweaty</a></li>
-        </ul>
-    </nav>
-    <nav class="burgerbar">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </nav>
+  <nav class="Nav-container">
+    <ul>
+        <label for="logo"></label>
+        <img src="Burnt.png" alt="burntLogo" width="100px" height="100px">
+        <li><a href="toning-calc.html">Tone Up</a></li>
+        <li><a href="get-built.html">Get Built</a></li>
+        <li><a href="cardio.html">Get Sweaty</a></li>
+    </ul>
+</nav>
+<nav class="burgerbar">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+</nav>
 
-  <div class="card w-100">
-<<<<<<< HEAD
-=======
->>>>>>> 96a4288e79527c5e39cd7e71301727602524d5b3
-=======
->>>>>>> c27f364 (saving changes)
-    <div class="card-body inputs">
-      <h1 class="card-header is-center">Enter your one rep maxes for a customized workout plan!</h1>
+<main class="content main">
+
+    <div class="card-body container is-center calc-header">
+      <h1 class="card-header is-center main">Enter your one rep maxes for a customized workout plan!</h1>
     </div>  
+    <!-- calculator inputs as a table -->
+      <table class="table is-fullwidth">
+        
+        <tr>
+        <!-- Bench Inputs -->
+          <td class="text-cool">Bench Press</td>
+          <td><input type="bench-press" class="input is-warning is-medium" id="bench" placeholder="Ex. 225"></td>
+        </tr>
+        <tr>
+          <!-- Squat Inputs -->
+          <td class="text-cool">Squat</td>
+          <td><input type="squat" class="input is-warning is-medium" id="squat" placeholder="Ex. 315"></td>
+        </tr>
+        <tr>
+          <!-- Deadlift Input -->
+          <td class="text-cool">Deadlift Input</td>
+          <td><input type="deadlift" class="input is-warning is-medium" id="deadlift" placeholder="Ex. 315"></td>
+        </tr>
+        <tr>
+          <!-- Curl Input -->
+          <td class="text-cool">Curl Input</td>
+          <td><input type="curl" class="input is-warning is-medium" id="curl" placeholder="Ex. 135"></td>
+        </tr>
 
-      <section class="bench card"> <!-- Bench Press Input-->
-        <h3 class="card-header">Bench Press</label>
-        <div class="col-sm-4">
-          <input type="bench-press" class="input is-medium" id="bench" placeholder="Ex. 225">
-        </div>
-      </section>
-
-      <section class="squat card"> <!--Squat Input-->
-        <h3 class="card-header">Squat</label>
-        <div class="col-sm-4">
-          <input type="squat" class="input is-medium" id="squat" placeholder="Ex. 315">
-        </div>
-      </section>
-
-      <section class="deadlift card"> <!--Deadlift Input-->
-        <h3 class="card-header">Deadlift</label>
-        <div class="col-sm-4">
-          <input type="deadlift" class="input is-medium" id="deadlift" placeholder="Ex. 315">
-        </div>
-      </section>
-
-      <section class="curl card"> <!--Curl Input-->
-        <h3 class="card-header">Biecp Curl</h3>
-        <div class="col-sm-4">
-          <input type="curl" class="input is-medium" id="curl" placeholder="Ex. 135">
-        </div>
-      </section>
-
-      <button id="submit-button" class="button is-danger is-large is-center">CLICK TO GET BURNT</button>
+      </table>
+    
+      <button id="submit-button" class="button is-large calc-btn">CLICK TO GET BURNT</button>
 
 </main>
 <!-- generated workout -->
-  <section class="card w-100">
-    <div class="card-body">
+  <section class="card">
+    <div class="card-body workout-card">
 
         <div id="workout-header">
-          <h2 id="split-title"></h2>
+          <h2 id="split-title" class="title is-1 workout-header"></h2>
         </div>
 
         <div id="days">
 
-          <h3 id="mon"></h3>
+          <h3 id="mon" class="title is-2 day-card"></h3>
             <p id="mon-plan"></p>
         
-          <h3 id="tues"></h3>
+          <h3 id="tues" class="title is-2"></h3>
             <p id="tues-plan"></p>
 
-          <h3 id="wed"></h3>
+          <h3 id="wed" class="title is-2"></h3>
             <p id="wed-plan"></p>
 
-          <h3 id="thr"></h3>
+          <h3 id="thr" class="title is-2"></h3>
             <p id="thr-plan"></p>
 
-          <h3 id="fri"></h3>
+          <h3 id="fri" class="title is-2"></h3>
             <p id="fri-plan"></p>
 
-          <h3 id="sat"></h3>
+          <h3 id="sat" class="title is-2"></h3>
             <p id="sat-plan"></p>
 
-          <h3 id="sun"></h3>
+          <h3 id="sun" class="title is-2"></h3>
             <p id="sun-plan"></p>
 
 
@@ -106,7 +99,7 @@
       </div>
      
 
-
+<!-- 
       <div class="col sm-1 sec">
         <div class="card workout sec">
           <div class="card-body">
@@ -144,7 +137,7 @@
         </div>
 
 
-        </div>
+        </div> -->
   </section>
     
 
