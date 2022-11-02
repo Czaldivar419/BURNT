@@ -5,3 +5,10 @@
     width: 100%;
     /* The width is the width of the web page */
   }
+.results {
+  text-transform: uppercase;
+  text-align: center;
+}
+.results > h2 {
+  font-weight: bold;
+}

@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Built Workout Program</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <script
     type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-  ></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js">
+    </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./modal.css">
     <link rel="stylesheet" href="./Main.css">
 </head>
 
 <body>
+<!-- Nav Bar-->
       <nav class="Nav-container">
         <div class="brand-title">
             <div class="new-new">
@@ -79,9 +80,9 @@
         
       </table>
       
-      <section>
-        <button id="submit-button" class="button is-danger is-large is-center calc-btn">CLICK TO GET BURNT</button>
-        <button id="save-button"  class="lastWorkoutButton button is-warning is-large is-center "> VIEW LAST BUTRN!</button>
+      <section class="calc-btnEl">
+        <button id="submit-button" class= "calc-btn button is-large is-center">CLICK TO GET BURNT</button>
+        <button id="save-button"  class="calc-btn lastWorkoutButton button is-warning is-large is-center "> VIEW LAST BUTRN!</button>
       </section>
       
     
@@ -116,7 +117,7 @@
           <h2 id="split-title" class="title is-1 workout-header"></h2>
         </div>
 
-        <div id="days">
+        <div id="days" class="workoutSchedule">
 
           <h3 id="mon" class="title is-2 day-card"></h3>
             <p id="mon-plan"></p>
@@ -142,29 +143,6 @@
 
         </div>
       </div>
-
-      <div id="days">
-
-        <h3 id="mon"></h3>
-        <p id="mon-plan"></p>
-
-        <h3 id="tues"></h3>
-        <p id="tues-plan"></p>
-
-        <h3 id="wed"></h3>
-        <p id="wed-plan"></p>
-
-        <h3 id="thr"></h3>
-        <p id="thr-plan"></p>
-
-        <h3 id="fri"></h3>
-        <p id="fri-plan"></p>
-
-        <h3 id="sat"></h3>
-        <p id="sat-plan"></p>
-
-        <h3 id="sun"></h3>
-        <p id="sun-plan"></p>
 
   </section>
 

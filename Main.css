@@ -185,14 +185,8 @@ hr {
     padding-right: 100px;
 }
 
-#submit-button {
-    background-color: var(--light-orange);
-    color: var(--font-color);
-} 
-
-#save-button {
-    display: flex;
-    margin-left: 46%;
+.burgerbar {
+    display: none;
 }
 
 @media only screen and (max-width: 390px) {
@@ -224,25 +218,8 @@ hr {
     }
 }
 
-/* media query section */
-/* 390px nav burger media query */
-.burgerbar {
-    display: none;
-}
-
-.Nav-container {
-    width:100%;
-}
-
-@media only screen and (max-width: 390px) {
-    .burgerbar {
-        display: block;
-    }
-    .Nav-container {
-        display: none;
-    }
-}
 /*  Leann's calculator section */
+
 .main { 
  text-align: center;
  padding: 2%;
@@ -278,13 +255,21 @@ hr {
     display: flex; 
     align-items: center;
 }
+.calc-btnEl {
+    display: flex;
+    justify-content: center;
+}
 .calc-btn {
     background-color: var(--light-orange);
     color: var(--font-color);
     font-weight:bold;
+    flex: 1 2 10%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 .calc-btn :hover{
     outline: none;
+    background: var(--light-orange);
     border: yellow;
     box-shadow: 0 0 10px yellow;
 }
@@ -292,14 +277,13 @@ hr {
 .workout-card {
     padding: 10%;
 }
-
 .workout-header {
     text-align: center;
+    padding-bottom: 2%;
 }
-
-.brand-title {
-    display: flex;
-    justify-content: space-between;
-    /* margin: 20px; */
-    align-items: center;
+.workoutSchedule {
+    text-align: center;
+}
+.workoutSchedule > p {
+    padding-bottom: 2%;
 }
