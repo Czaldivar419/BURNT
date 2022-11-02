@@ -25,6 +25,8 @@ body {
 
 .blogo {
     margin-right: 85%;
+    width: 35%;
+    /* added width to see if that will shrink the logo down */
 }
 
 .brand-title {
