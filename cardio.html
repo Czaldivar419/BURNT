@@ -29,6 +29,7 @@
         <li><a href="toning-calc.html">Tone Up</a></li>
         <li><a href="get-built.html">Get Built</a></li>
         <li><a href="cardio.html">Get Sweaty</a></li>
+        <li><a href="map.html">Gyms</a></li>
     </ul>
 </nav>
 <nav class="burgerbar">
@@ -43,42 +44,46 @@
       <a href="toning-calc.html"></a>
       <a href="get-built.html"></a>
       <a href="cardio.html"></a>
+      <a href="map.html"></a>
     </div>
 </nav>
-
-  <main class="content main">
+<!-- calculator inputs as a table -->
+<main class="content main">
     
     <div class="card-body container is-center calc-header">
       <h1 class="card-header is-center main">Enter the following info to get sweaty!</h1>
     </div>
 
-      <section class="steps card"> 
-        <h3 class="card-header">How many steps do you take in a day?</h3>
-        <div class="col-sm-4">
-          <input type="steps" class="input is-medium" id="steps" placeholder="Ex. 5,000">
-        </div>
-      </section>
+    <table class="table is-fullwidth">
+        
+      <tr>
+      <!-- Bench Inputs -->
+        <td class="text-cool2">How many steps do you take in a day?</td>
+        <td><input type="bench-press" class="input is-warning is-medium" id="bench" placeholder="Ex. 225"></td>
+      </tr>
+      <tr>
+        <!-- Squat Inputs -->
+        <td class="text-cool2">How old are you?</td>
+        <td><input type="squat" class="input is-warning is-medium" id="squat" placeholder="Ex. 315"></td>
+      </tr>
+      <tr>
+        <!-- Deadlift Input -->
+        <td class="text-cool2">How many minutes do you spend walking/running each day</td>
+        <td><input type="deadlift" class="input is-warning is-medium" id="deadlift" placeholder="Ex. 315"></td>
+      </tr>
+      <tr>
+        <!-- Curl Input -->
+        <td class="text-cool2">Do you want to add a cooldown to this workout?</td>
+        <td><input type="curl" class="input is-warning is-medium" id="curl" placeholder="Ex. 135"></td>
+      </tr>
+      
+    </table>
 
-      <section class="age card"> <!--User Age Input-->
-        <h3 class="card-header">How old are you?</h3>
-        <div class="col-sm-4">
-          <input type="userAge" class="input is-medium" id="userAge" placeholder="Ex. 25">
-        </div>
-      </section>
-
-      <section class="run card"> <!--Run Time Input-->
-        <h3 class="card-header">How many minutes do you spend walking/running each day?</h3>
-        <div class="col-sm-4">
-          <input type="runTime" class="input is-medium" id="runTime" placeholder="Ex. 10">
-        </div>
-      </section>
-
-      <section class="stetch card"> <!--Stretch Input-->
-        <h3 class="card-header">Do you want to add a cooldown to this workout?</h3>
-        <div class="col-sm-4">
-          <input type="stretch" class="input is-medium" id="stretch" placeholder="Ex. Yes or No">
-      </section>
-
+    <section>
+      <button id="submit-button" class="button is-danger is-large is-center">CLICK TO GET BURNT</button>
+      <button id="save-button"  class="lastWorkoutButton button is-warning is-large is-center "> VIEW LAST BUTRN!</button>
+    </section>
+    
       <!-- cooldown modal -->
 
       <div class="stretchModal">
@@ -86,12 +91,10 @@
         <div class="modal-content">
           Remember stretching is importent!
         </div> -->
-        <button id="submit-button" class="button is-large calc-btn">CLICK TO GET BURNT</button>
+
       </div>
 
 <!-- modal for saved workouts -->
-      <button id="save-button"  class="lastWorkoutButton" class="button"> Last burn!</button>
-
       <div id="saveModal" class ="modal">
         <div class="modal-content">
           <span id="closeBtn" class ="exit">&times;</span>
