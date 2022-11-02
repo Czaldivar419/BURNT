@@ -11,7 +11,6 @@
 }
 body {
     background-color: #efefef;
-    /* color: #FAA307; */
     color: var(--font-color);
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
@@ -25,12 +24,17 @@ body {
 .brand-title {
     display: flex;
     justify-content: space-between;
-    /* margin: 20px; */
+    margin: 20px;
     align-items: center;
-    
+    background-color: var(--dark);
 } 
 
-
+.new-new {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+ 
 label {
     display: flex;
     justify-content: center;
@@ -40,7 +44,7 @@ label {
     display: flex;
     justify-content: center;
     letter-spacing: 2px;
-    margin-right: 860px;
+    margin-right: 58%;
     border-radius: 10%;
 
 }
@@ -185,7 +189,6 @@ hr {
     display: none;
 }
 
-
 @media only screen and (max-width: 390px) {
     .burgerbar {
         display: block;
@@ -216,6 +219,7 @@ hr {
 }
 
 /*  Leann's calculator section */
+
 .main { 
  text-align: center;
  padding: 2%;
