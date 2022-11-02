@@ -58,29 +58,29 @@
       <tr>
       <!-- Bench Inputs -->
         <td class="text-cool2">How many steps do you take in a day?</td>
-        <td><input type="bench-press" class="input is-warning is-medium" id="bench" placeholder="Ex. 225"></td>
+        <td><input type="bench-press" class="input is-warning is-medium" id="steps" placeholder="Ex. 2,000"></td>
       </tr>
       <tr>
         <!-- Squat Inputs -->
         <td class="text-cool2">How old are you?</td>
-        <td><input type="squat" class="input is-warning is-medium" id="squat" placeholder="Ex. 315"></td>
+        <td><input type="squat" class="input is-warning is-medium" id="userAge" placeholder="Ex. 28"></td>
       </tr>
       <tr>
         <!-- Deadlift Input -->
         <td class="text-cool2">How many minutes do you spend walking/running each day</td>
-        <td><input type="deadlift" class="input is-warning is-medium" id="deadlift" placeholder="Ex. 315"></td>
+        <td><input type="deadlift" class="input is-warning is-medium" id="runTime" placeholder="Ex. 15mins"></td>
       </tr>
       <tr>
         <!-- Curl Input -->
         <td class="text-cool2">Do you want to add a cooldown to this workout?</td>
-        <td><input type="curl" class="input is-warning is-medium" id="curl" placeholder="Ex. 135"></td>
+        <td><input type="curl" class="input is-warning is-medium" id="stretch" placeholder="Ex. Yes or no?"></td>
       </tr>
       
     </table>
 
-    <section>
-      <button id="submit-button" class="button is-danger is-large is-center">CLICK TO GET BURNT</button>
-      <button id="save-button"  class="lastWorkoutButton button is-warning is-large is-center "> VIEW LAST BUTRN!</button>
+    <section class="calc-btnEl">
+      <button id="submit-button" class= "calc-btn button is-large is-center">CLICK TO GET BURNT</button>
+      <button id="save-button"  class="calc-btn lastWorkoutButton button is-warning is-large is-center "> VIEW LAST BURN!</button>
     </section>
     
       <!-- cooldown modal -->
@@ -120,9 +120,8 @@
           <h2 id="split-title" class="title is-1 workout-header"></h2>
         </div>
 
-        <div id="days">
+        <div id="days" class="workoutSchedule">
 
-          
           <h3 id="mon" class="title is-2 day-card"></h3>
             <p id="mon-plan"></p>
         

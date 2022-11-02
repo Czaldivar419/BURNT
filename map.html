@@ -13,11 +13,12 @@
         "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
     </script>
     <!-- playground-hide-end -->
-
-
     <div id ="demo"> </div>
-    <link rel="stylesheet" type="text/css" href="./map.css" />
     <script type="module" src="./map.js"></script>
+    <!-- style links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./Main.css">
+    <link rel="stylesheet" type="text/css" href="./map.css">
   </head>
   <body>
     <header>
@@ -53,10 +54,10 @@
     </header>
     <div id="container">
       <div id="map"></div>
-      <div id="sidebar">
+      <div id="sidebar" class="results">
         <h2>Results</h2>
         <ul id="places"></ul>
-        <button id="more">Load more results</button>
+        <button class="calc-btn button is-warning" id="more">Load more results</button>
       </div>
     </div>
 

@@ -251,13 +251,21 @@ hr {
     display: flex; 
     align-items: center;
 }
+.calc-btnEl {
+    display: flex;
+    justify-content: center;
+}
 .calc-btn {
     background-color: var(--light-orange);
     color: var(--font-color);
     font-weight:bold;
+    flex: 1 2 10%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 .calc-btn :hover{
     outline: none;
+    background: var(--light-orange);
     border: yellow;
     box-shadow: 0 0 10px yellow;
 }
@@ -265,14 +273,13 @@ hr {
 .workout-card {
     padding: 10%;
 }
-
 .workout-header {
     text-align: center;
+    padding-bottom: 2%;
 }
-
-.brand-title {
-    display: flex;
-    justify-content: space-between;
-    /* margin: 20px; */
-    align-items: center;
+.workoutSchedule {
+    text-align: center;
+}
+.workoutSchedule > p {
+    padding-bottom: 2%;
 }

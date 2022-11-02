@@ -69,7 +69,7 @@ function createWorkout() {
 //-------------------------------------------Monday--------------------------------------------------------
    
    var mon = document.getElementById("mon");
-   var monText =  today.format("[Workout for:] dddd")
+   var monText =  today.format("dddd")
    mon.textContent=monText;
 
       let monSplit = document.querySelector("#mon-plan")
@@ -84,7 +84,7 @@ function createWorkout() {
 //-------------------------------------------Tuesday---------------------------------------------------------
    
    var tues = document.getElementById("tues");
-   var tuesText =  day2.format("[Workout for:] dddd")
+   var tuesText =  day2.format("dddd")
    tues.textContent=tuesText;
 
       let tuesSplit = document.querySelector("#tues-plan")
@@ -99,7 +99,7 @@ function createWorkout() {
 // -------------------------------------------Wednesday---------------------------------------------------------
    
    var wed = document.getElementById("wed");
-   var wedText = day3.format("[Workout for:] dddd")
+   var wedText = day3.format("dddd")
    wed.textContent=wedText;
 
       let wedSplit = document.querySelector("#wed-plan")
@@ -115,7 +115,7 @@ function createWorkout() {
 
 
    var thr = document.getElementById("thr");
-   var thrText =  day4.format("[Workout for:] dddd")
+   var thrText =  day4.format("dddd")
    thr.textContent=thrText;
 
       let thrSplit = document.querySelector("#thr-plan")
@@ -131,7 +131,7 @@ function createWorkout() {
 // -----------------------------------------Friday----------------------------------------------------------------------
 
    var fri = document.getElementById("fri");
-   var friText = day5.format("[Workout for:] dddd")
+   var friText = day5.format("dddd")
    fri.textContent=friText;
 
       let friSplit = document.querySelector("#fri-plan")
@@ -146,7 +146,7 @@ function createWorkout() {
 //-----------------------------------Saturday-----------------------------------------------------------------------------
 
    var sat = document.getElementById("sat");
-   var satText = day6.format("[Workout for:] dddd")
+   var satText = day6.format("dddd")
    sat.textContent=satText;
 
       let satSplit = document.querySelector("#sat-plan")
@@ -162,7 +162,7 @@ function createWorkout() {
 //-----------------------------------Sunday-----------------------------------------------------------------------------
 
    var sun = document.getElementById("sun");
-   var sunText = day7.format("[Workout for:] dddd")
+   var sunText = day7.format("dddd")
    sun.textContent=sunText;
 
       let sunSplit = document.querySelector("#sun-plan")
