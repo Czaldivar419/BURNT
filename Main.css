@@ -181,6 +181,9 @@ hr {
     padding-right: 100px;
 }
 
+.burgerbar {
+    display: none;
+}
 
 
 @media only screen and (max-width: 390px) {
@@ -212,24 +215,6 @@ hr {
     }
 }
 
-/* media query section */
-/* 390px nav burger media query */
-.burgerbar {
-    display: none;
-}
-
-.Nav-container {
-    width:100%;
-}
-
-@media only screen and (max-width: 390px) {
-    .burgerbar {
-        display: block;
-    }
-    .Nav-container {
-        display: none;
-    }
-}
 /*  Leann's calculator section */
 .main { 
  text-align: center;
