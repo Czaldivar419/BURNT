@@ -55,7 +55,8 @@ ul {
     justify-content: space-between;
     list-style: none;
     text-transform: uppercase;
-    /* letter-spacing: 1px; */
+    letter-spacing: 1px;
+    padding-right: 5%;
 }
 .main-nav > li {
     display: flex;
@@ -98,6 +99,7 @@ li :hover {
     margin-left: 275px;
     text-transform: none;
     margin-top: 10px;
+    padding-bottom: 1%;
 }
 
 #workouts {
@@ -153,6 +155,33 @@ hr {
     border: 1px solid black;
     width: 90%;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: start;
+    padding-top: 35px;
+}
+
+.copyright {
+    /* margin-right: 1px; */
+    margin-left: 2%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: end;
+    margin-top: -45px;
+}
+
+.instagram-logo {
+    padding-right: 25px;
+}
+
+.twitter-logo {
+    padding-right: 100px;
+}
+
+
 
 @media only screen and (max-width: 390px) {
     .burgerbar {
@@ -256,8 +285,9 @@ hr {
     text-align: center;
 }
 
-.social-media{
-    text-align: center;
-    font-size: 30px;
-    padding: 30px;
+.brand-title {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 20px; */
+    align-items: center;
 }

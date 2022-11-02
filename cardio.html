@@ -48,39 +48,38 @@
   <main class="content main">
     
     <div class="card-body container is-center calc-header">
-      <h1 class="card-header is-center main">Enter the following info for a customized Cardio workout plan!</h1>
+      <h1 class="card-header is-center main">Enter the following info to get sweaty!</h1>
     </div>
-    <!-- calculator inputs as a table -->
-    <table class="table is-fullwidth">
 
-      <tr>
-        <!-- steps inputs -->
-        <td class="text-cool2">How many steps do you take in a day?</td>
-        <td><input type="steps" class="input is-warning is-medium flexible" id="steps" placeholder="Ex. 5,000"></td>
-      </tr>
-      <tr>
-        <!-- age input -->
-        <td class="text-cool2">How old are you?</td>
-        <td class="age-card">
-          <input type="userAge" class="input is-warning is-medium" id="userAge" placeholder="Ex. 25">
-        </td>
-      </tr>
-      <tr>
-        <!-- run time input-->
-        <td class="text-cool2">How many minutes do you spend running everyday?</td>
-        <td>
-          <input type="runTime" class="input is-warning is-medium" id="runTime" placeholder="Ex. 10">
-        </td>
-      </tr>
-      <tr>
-        <!-- stretch input -->
-        <td class="text-cool2">Do you want to add a cooldown to this workout?</td>
-        <td>
-          <input type="stretch" class="input is-warning is-medium" id="stretch" placeholder="Ex. Yes or No">
-        </td>
-      </tr>
-    </table>
-     <!-- cooldown modal -->
+      <section class="steps card"> 
+        <h3 class="card-header">How many steps do you take in a day?</h3>
+        <div class="col-sm-4">
+          <input type="steps" class="input is-medium" id="steps" placeholder="Ex. 5,000">
+        </div>
+      </section>
+
+      <section class="age card"> <!--User Age Input-->
+        <h3 class="card-header">How old are you?</h3>
+        <div class="col-sm-4">
+          <input type="userAge" class="input is-medium" id="userAge" placeholder="Ex. 25">
+        </div>
+      </section>
+
+      <section class="run card"> <!--Run Time Input-->
+        <h3 class="card-header">How many minutes do you spend walking/running each day?</h3>
+        <div class="col-sm-4">
+          <input type="runTime" class="input is-medium" id="runTime" placeholder="Ex. 10">
+        </div>
+      </section>
+
+      <section class="stetch card"> <!--Stretch Input-->
+        <h3 class="card-header">Do you want to add a cooldown to this workout?</h3>
+        <div class="col-sm-4">
+          <input type="stretch" class="input is-medium" id="stretch" placeholder="Ex. Yes or No">
+      </section>
+
+      <!-- cooldown modal -->
+
       <div class="stretchModal">
         <!-- <div class="modal-background"></div>
         <div class="modal-content">
