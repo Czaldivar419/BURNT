@@ -27,7 +27,9 @@ body {
     justify-content: space-between;
     /* margin: 20px; */
     align-items: center;
-}
+    
+} 
+
 
 label {
     display: flex;
@@ -39,6 +41,13 @@ label {
     justify-content: center;
     letter-spacing: 2px;
     margin-right: 860px;
+    border-radius: 10%;
+
+}
+.bLogo:hover{
+    color: #111; 
+    background: #FFBA08; 
+    box-shadow: 0 0 100px #FFBA08; 
 }
 
 ul {
