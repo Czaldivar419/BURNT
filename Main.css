@@ -19,6 +19,12 @@ body {
 .Nav-container {
     background-color: var(--dark);
     color: var(--light-orange);
+    display: flex;
+    align-items: center;
+}
+
+.blogo {
+    margin-right: 85%;
 }
 
 .brand-title {
@@ -61,6 +67,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-right: 5%;
+    margin-left: 53%;
 }
 .main-nav > li {
     display: flex;
