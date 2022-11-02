@@ -12,3 +12,6 @@
 .results > h2 {
   font-weight: bold;
 }
+.results > ul {
+  text-align: center;
+}
