@@ -15,11 +15,15 @@ body {
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
 }
-
+.navbar-official {
+    display: flex;
+    justify-content: space-between;
+}
 .Nav-container {
     background-color: var(--dark);
     color: var(--light-orange);
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -64,7 +68,7 @@ label {
 
 .main-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     list-style: none;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -74,6 +78,9 @@ label {
 .main-nav > li {
     display: flex;
     justify-content: flex-end; 
+    padding-right: 5%;
+    border: 5%;
+    text-align: center;
 }
 li a {
     text-decoration: none;
