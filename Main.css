@@ -114,11 +114,14 @@ li :hover {
     /* border: 1px solid black; */
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    text-align: center;
 }
 
 .list-container {
     /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
     margin-left: 275px;
     text-transform: none;
     margin-top: 10px;
@@ -129,7 +132,7 @@ li :hover {
     padding-left: 250px;
 }
 
-.p-container {
+/* .p-container {
     display: flex;
     justify-content: flex-start;
     text-transform: none;
@@ -138,21 +141,29 @@ li :hover {
     margin-top: -34px;
     color: #888888;
     align-items: center;
-}
+} */
 
 #variety {
     padding-left: 185px;
 }
-
+hr {
+    text-align: center;
+    width:100%;
+}
 .social-media {
+    text-align: center;
     display: flex;
     justify-content: space-around;
     padding-right: 5%;
     padding-left: 5%;
 }
+.social-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
 
 #instagram {
-    display: flex;
     margin-right: 720px;
 }
 
@@ -181,7 +192,7 @@ hr {
 
 .footer-container {
     display: flex;
-    justify-content: start;
+    justify-content:space-between;
     padding-top: 35px;
 }
 
@@ -193,7 +204,7 @@ hr {
 .social-icons {
     display: flex;
     justify-content: end;
-    margin-top: -45px;
+ 
 }
 
 .instagram-logo {
@@ -263,15 +274,14 @@ hr {
         padding-left: 190px;
     }
 
-    .p-container {
+    .info-container {
         display: flex;
         justify-content: flex-start;
         text-transform: none;
-        margin-left: 30px;
-        font-size: 15px;
+        /* margin-left: 30px;
+        font-size: 15px; */
         margin-top: -5px;
         color: #888888;
-        align-items: center;
     }
 
     #variety {
