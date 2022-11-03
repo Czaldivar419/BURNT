@@ -62,7 +62,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Live Link: https://czaldivar419.github.io/BURNT/
+## Live Link: 
+https://czaldivar419.github.io/BURNT/
 
 ## Features
 Custom Workout Generators: Create custom workouts indivually tailored to your fitness goals and strength level.
