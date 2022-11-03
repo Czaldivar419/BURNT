@@ -67,6 +67,7 @@ https://czaldivar419.github.io/BURNT/
 
 ## Features
 Custom Workout Generators: Create custom workouts indivually tailored to your fitness goals and strength level.
+
 Gym Locator: Find gyms near you to work out at.
 
 ## How to Contribute
