@@ -62,7 +62,7 @@ label {
     box-shadow: 0 0 100px #FFBA08; 
 }
 
-ul {
+.main-nav {
     display: flex;
     justify-content: space-between;
     list-style: none;
