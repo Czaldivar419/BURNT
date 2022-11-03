@@ -7,6 +7,8 @@
     --font-color:  #101010;
 }
 * {
+    padding: 0;
+    margin: 0;
     font-family: 'Rubik', sans-serif;
 }
 body {
@@ -27,11 +29,6 @@ body {
     align-items: center;
 }
 
-.blogo {
-    margin-right: 85%;
-    width: 35%;
-    /* added width to see if that will shrink the logo down */
-}
 
 .brand-title {
     display: flex;
@@ -40,6 +37,12 @@ body {
     align-items: center;
     background-color: var(--dark);
 } 
+
+.blogo {
+    margin-right: 85%;
+    /* width: 35%; */
+    /* added width to see if that will shrink the logo down */
+}
 
 .new-new {
     display: flex;
@@ -205,7 +208,20 @@ hr {
     display: none;
 }
 
-@media only screen and (max-width: 390px) {
+@media screen and (max-width: 390px) {
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing:border-box;
+    }
+
+
+    body {
+        width: 100%;
+        font-size: 16px;
+    }
+
     .burgerbar {
         display: block;
     }
@@ -218,19 +234,153 @@ hr {
      .main-nav {
         display: none;
     }
+
+    .brand-title {
+        justify-content: start;
+        align-items: center;
+      }
+
+
+    h2 {
+        margin-left: 10%;
+        font-size: 23px;
+    }
+
     .article {
         flex-direction: column;
         align-items: center;
     }
-    .brand-title {
-      justify-content: start;
-      align-items: center;
+
+    .list-container {
+        /* border: 1px solid black; */
+        margin-left: 35px;
+        text-transform: none;
+        margin-top: 10px;
+        padding-bottom: 1%;
     }
-    body {
-        font-size: 12px;
+
+    #workouts {
+        padding-left: 190px;
     }
+
+    .p-container {
+        display: flex;
+        justify-content: flex-start;
+        text-transform: none;
+        margin-left: 30px;
+        font-size: 15px;
+        margin-top: -5px;
+        color: #888888;
+        align-items: center;
+    }
+
+    #variety {
+        padding-left: 150px;
+    }
+    hr {
+        width: 100%;
+    }
+
+    .text-container {
+        display: flex;
+        padding-left: 30px;
+        font-size: 15px;
+        margin-top: -20px;
+    }
+
+    #slogan {
+        display: none;
+    }
+    
+    .instagram-users {
+        display: flex;
+        justify-content: center;
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: start;
+        padding-top: 35px;
+        background-color: #efefef;
+        padding-bottom: 5%;
+    }
+
     p {
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing:border-box;
+    }
+
+    body {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding-right: 5%;
+        margin-left: 11%;
+    }
+
+    h2 {
+        margin-left: 10%;
+        font-size: 23px;
+    }
+
+    .list-container {
+        /* border: 1px solid black; */
+        margin-left: 75px;
+        text-transform: none;
+        margin-top: 10px;
+        padding-bottom: 1%;
+    }
+
+    #workouts {
+        padding-left: 235px;
+    }
+
+    .p-container {
+        display: flex;
+        justify-content: flex-start;
+        text-transform: none;
+        margin-left: 48px;
+        font-size: 15px;
+        margin-top: -10px;
+        color: #888888;
+        align-items: center;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: start;
+        padding-top: 35px;
+        background-color: #efefef;
+        padding-bottom: 3%;
+    }
+
+    .social-list {
+        display: none;
+    }
+
+    .text-container {
+        display: none;
     }
 }
 
