@@ -7,8 +7,12 @@
   }
 .results {
   text-transform: uppercase;
-  text-align: center;
+  text-align: center !important;
 }
 .results > h2 {
   font-weight: bold;
+}
+#places {
+  text-align: center;
+  flex-direction: column !important;
 }
