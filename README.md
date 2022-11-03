@@ -5,34 +5,38 @@
 As a user I want a website that I can navigate through and pick from one of the three catagories In the navbar and get a custom
 workout based off of my custom input.
 
+
 ## Description
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+How many of us have made a New Year's resolution to start going to the gym and struggled to follow through with their goals? Your goal could have been to lose weight, to stay in shape, or even gain weight and build mass. The hard part of making this big lifestyle change is creating a workout routine and staying on a consistent schedule. Research suggests that 80% of January gym goers quit by February due to a lack of motivation and poor planning. We found a solution to that problem, and it is called BURNT.
+Here at BURNT we created a website that will create a fitness routine for users, so they can Get Built, Get Sweaty or Tone Up. Each program allows you to input how much you can bench press, squat, deadlift, curl, how many steps you take, etc. These weekly plans are designed to make our user’s fitness journey more enjoyable and attainable by making sure nothing gets missed and planning for fun. Our well-structured workout plans will help prevent burn out and keep users motivated to reach their goals because they will use a weekly workout plan in place & they can change up their routine as often as they like.
+
 
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Users need a device that can accesss the internet.
+
+For gym and trainer finder components to work best, users should allow location finding. 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+Users will experience a wonderful personal training experience when using BURNT's workout calculators. 
 
 ![alt text](assets/images/screenshot.png)
 
 ## Credits
 
 https://github.com/Czaldivar419
+
 https://github.com/leann-labra
+
 https://github.com/BaileyM96
+
 https://github.com/Ileanacz
+
 https://github.com/sublime-sweetie
 
 
