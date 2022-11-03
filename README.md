@@ -9,6 +9,7 @@ workout based off of my fitness goals and strength level.
 ## Description
 
 How many of us have made a New Year's resolution to start going to the gym and struggled to follow through with their goals? Your goal could have been to lose weight, to stay in shape, or even gain weight and build mass. The hard part of making this big lifestyle change is creating a workout routine and staying on a consistent schedule. Research suggests that 80% of January gym goers quit by February due to a lack of motivation and poor planning. We found a solution to that problem, and it is called BURNT.
+
 Here at BURNT we created a website that will create a fitness routine for users, so they can Get Built, Get Sweaty or Tone Up. Each program allows you to input how much you can bench press, squat, deadlift, curl, how many steps you take, etc. These weekly plans are designed to make our user’s fitness journey more enjoyable and attainable by making sure nothing gets missed and planning for fun. Our well-structured workout plans will help prevent burn out and keep users motivated to reach their goals because they will use a weekly workout plan in place & they can change up their routine as often as they like.
 
 
@@ -61,7 +62,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
+Live Link: https://czaldivar419.github.io/BURNT/
 
 ## Features
 Custom Workout Generators: Create custom workouts indivually tailored to your fitness goals and strength level.
